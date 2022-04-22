@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/summercamp2022/static/css/main.fe719ce6.css",
-    "main.js": "/summercamp2022/static/js/main.725ed359.js",
+    "main.js": "/summercamp2022/static/js/main.6c9e01b0.js",
     "static/js/787.67a2de05.chunk.js": "/summercamp2022/static/js/787.67a2de05.chunk.js",
     "index.html": "/summercamp2022/index.html",
     "main.fe719ce6.css.map": "/summercamp2022/static/css/main.fe719ce6.css.map",
-    "main.725ed359.js.map": "/summercamp2022/static/js/main.725ed359.js.map",
+    "main.6c9e01b0.js.map": "/summercamp2022/static/js/main.6c9e01b0.js.map",
     "787.67a2de05.chunk.js.map": "/summercamp2022/static/js/787.67a2de05.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe719ce6.css",
-    "static/js/main.725ed359.js"
+    "static/js/main.6c9e01b0.js"
   ]
 }
