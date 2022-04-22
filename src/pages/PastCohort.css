@@ -1,0 +1,40 @@
+nav{
+    display:flex;
+    justify-content: space-between;
+     max-width:1000px;
+    margin:0 auto;
+  }
+  .flex-container{
+    display:flex;
+    justify-content: space-between;
+    
+  }
+  a{
+    margin:0 10px; 
+  }
+  
+  .container-flex{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .item-flex{
+    border: 2.5px  solid blue;
+    margin-left:100px; 
+    padding:25px 25px;
+    font-family:serif;
+    font-size:20px;
+     
+  }
+  h2{
+    text-align:center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+   
+  }
+  
+  p {
+    
+    font-style:italic;
+  }
