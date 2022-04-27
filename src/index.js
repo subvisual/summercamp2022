@@ -12,7 +12,7 @@ import Blog from "./pages/Blog";
 import Layout from "./component/Layout";
 
 ReactDOM.render(
-  <BrowserRouter basename="/summercamp2002">
+  <BrowserRouter basename="/summercamp2022">
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
