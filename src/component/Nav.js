@@ -1,11 +1,11 @@
 import Link from "./Link";
 
 const navLinks = [
-  { label: "Home", url: "/" },
-  { label: "Past Cohort", url: "/pastCohort" },
-  { label: "About us ", url: "/aboutUs" },
-  { label: "Blog ", url: "/blog" },
-  { label: "Contact", url: "/contact" },
+  { label: "Home", url: "/summercamp2022/" },
+  { label: "Past Cohort", url: "/summercamp2022/pastCohort" },
+  { label: "About us ", url: "/summercamp2022/aboutUs" },
+  { label: "Blog ", url: "/summercamp2022/blog" },
+  { label: "Contact", url: "/summercamp2022/contact" },
 ];
 
 function Nav() {
