@@ -8,58 +8,126 @@ import React, { Fragment } from "react";
 function Home() {
   return (
     <Fragment>
-      <div className="grid-container">
-        <div className="grid-item1">
-          <h2>An immersive experience</h2>
-          <p>Explain what Summer Camp is</p>
+      <div class="container1">
+        <div class="right">
+          <h2>Join us </h2>
         </div>
 
-        <div className="grid-item2">
-          <h2>Discover how it´s like in the "real world"</h2>
-          <p>Briefly describe the day-today</p>
-        </div>
-
-        <div className="grid-item3">
-          <h2>Find out what it´s like to work as a team</h2>
+        <div class="left">
+          <h2>on a hands-on approach</h2>
           <p>
-            What´s it like to be project-driven,get mentorship,short-circuit
-            your growth
+            We created SummerCamp back in 1992 as a <br />
+            way to foster talent, get new work perspectives and
+            <br />
+            contribute to boosting new career opportunities.
+            <br />
+            We believe in continuous learning and improvement,
+            <br />
+            so SummerCamp is yet another way of us acting on
+            <br />
+            those values
+          </p>
+          <h2>to get a real work experience</h2>
+          <p>
+            Whether you want to follow a career in technology or <br />
+            product, during your time at SummerCamp you'll get <br />
+            access to a real use case that will help you <br />
+            understand how a job in that area could be like.
+          </p>
+          <h2>with the support of a great team</h2>
+          <p>
+            Our team members will be your mentors during the <br />
+            entire program, wich means that you will always
+            <br />
+            have someone to back your decisions and help you <br />
+            choose wich path to follow
           </p>
         </div>
       </div>
-      <div className="Page2">
-        <h2>What area interests you the most?</h2>
-
-        <div class="container-flex">
-          <div class="item-flex"> Dev</div>
-          <div class="item-flex"> Product Design</div>
-          <div class="item-flex"> Product Management</div>
+      <div class="container2">
+        <h2>Are you up to this challenge?</h2>
+        <p>
+          Here you will meet other Campers that share your passion for <br />
+          technology, and who will work alongside you to create a cool
+          <br />
+          new product from scratch.
+        </p>
+      </div>
+      <div class="container3">
+        <div class="right">
+          <h2>if you like</h2>
         </div>
-        <h2>Advantages </h2>
+        <div class="left">
+          <ul>
+            <li>product Management</li>
+            <li>programming</li>
+            <li>product design</li>
+          </ul>
+        </div>
+      </div>
+      <div class="container4">
+        <h2>this is your opportunity to</h2>
         <div class="container-flex">
           <div class="item-flex">
-            <p>Icon 1 </p> Professional experience
+            <p>01 </p>
+            <p>Get professional experience</p>
           </div>
           <div class="item-flex">
-            <p>Icon 2 </p>
-            Get your foot in the door
+            <p>02 </p>
+            <p>Meet other talented people</p>
           </div>
           <div class="item-flex">
-            <p> Icon 3 </p> Meet experienced mentors
+            <p>03</p>
+            <p>Learn with experienced mentors</p>
+          </div>
+        </div>
+      </div>
+      <div className="container5">
+        <h2>but don’t just take our word for it</h2>
+        <p>
+          Here you will meet other Campers that share your passion for <br />
+          technology, and who will work alongside you to create a cool <br />
+          new product from scratch.
+        </p>
+        <textarea
+          id="textbox"
+          name="textbox"
+          rows="25"
+          cols="100"
+          className="textbox"
+        ></textarea>
+      </div>
+      <div className="container6">
+        <h2>Here´s what our campers have done in the past years</h2>
+        <div className="container-flex">
+          <div className="item-flex">
+            <p>01 </p>
+          </div>
+          <div class="item-flex">
+            <p>02 </p>
+          </div>
+          <div class="item-flex">
+            <p>03</p>
           </div>
         </div>
       </div>
 
-      <h2>What can you expect?</h2>
-      <p>Lorem ipsum dolor sit amet</p>
-
-      <p> + FAQs</p>
-      <div className="grid-container">
-        <div class="item1">Hiring process</div>
-        <div class="item2">Stage 1 </div>
-        <div class="item3">Stage 2</div>
-        <div class="item4">Stage 3</div>
-        <div class="item5">Stage 4</div>
+      <div className="container7">
+        <h2>How it works</h2>
+        <div className="container-flex">
+          <div className="item-flex">
+            <p>You submit your application</p>
+          </div>
+          <div className="item-flex">
+            <p>We check your profile</p>
+          </div>
+          <div className="item-flex">
+            <p>We schedule a call to meet you*</p>
+          </div>
+          <div className="item-flex">
+            <p>You join the program!</p>
+          </div>
+        </div>
       </div>
     </Fragment>
   );
