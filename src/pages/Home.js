@@ -11,11 +11,11 @@ function Home() {
       <div class="join-us">
         <div className="container">
           <div className="columns">
-            <div className="left">
-              <h2 className="title">Join us </h2>
+            <div className="join-us-left">
+              <h2 className="title">Join us</h2>
             </div>
 
-            <div className="right">
+            <div className="join-us-right">
               <div className="item">
                 <h2 className="title">
                   <span>on a</span>
@@ -24,7 +24,7 @@ function Home() {
                 </h2>
                 <div className="content">
                   <p>
-                    We created SummerCamp back in 1992 as a way to foster
+                    We created SummerCamp back in 2016 as a way to foster
                     talent, get new work perspectives and contribute to boosting
                     new career opportunities. We believe in continuous learning
                     and improvement, so SummerCamp is yet another way of us
@@ -33,7 +33,11 @@ function Home() {
                 </div>
               </div>
               <div className="item">
-                <h2 className="title">to get a real work experience</h2>
+                <h2 className="title">
+                  <span>to get a </span>
+                  <span className="has-text-primary"> real work </span>
+                  <span>experience</span>
+                </h2>
                 <div className="content">
                   <p>
                     Whether you want to follow a career in technology or
@@ -44,7 +48,10 @@ function Home() {
                 </div>
               </div>
               <div className="item">
-                <h2 className="title">with the support of a great team</h2>
+                <h2 className="title">
+                  <span> with the support of a </span>
+                  <span className="has-text-primary"> great team</span>
+                </h2>
                 <div className="content">
                   <p>
                     Our team members will be your mentors during the entire

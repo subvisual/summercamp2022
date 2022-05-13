@@ -1,99 +1,66 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-}
+/* Join-us */
 
-.grid-item1,
-.grid-item2,
-.grid-item3 {
-  grid-column-start: 1;
-  grid-column-end: 7;
-  border: 5px solid red;
+.join-us .container {
+  margin: 0 auto;
+  max-width: 1152px;
+  background-color: #e8f4ff;
+  border-radius: 60px;
 }
-
-.join-us h2 {
-  text-align: left;
-  margin-bottom: 50px;
-  margin-top: 50px;
-}
-
-/* p {
-  font-style: italic;
-} */
-
-.join-us {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.container2 {
-  display: block;
-  width: max-content;
-  padding: auto;
-}
-.container3 {
-  display: grid;
-  grid-template-columns: auto auto;
-}
-.container-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.item-flex {
-  border: 2.5px solid black;
-  margin-left: 100px;
-  padding: 25px 25px;
-  font-family: serif;
-  font-size: 20px;
-}
-
-.textbox {
-  padding-left: 50px;
-  margin-left: 50px;
-}
-
-.join-us .left {
-  grid-column: span 4;
-}
-
-.join-us .right {
-  grid-column: span 8;
-}
-
 .join-us .columns {
   display: grid;
   grid-column-gap: 28px;
   grid-template-columns: repeat(12, [col] 1fr);
 }
+.columns .join-us-left {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  font-family: "Colfax";
+  font-size: 84px;
+  color: #403f4c;
+  text-align: left;
+}
+
+.columns .join-us-right {
+  grid-column-start: 5;
+  grid-column-end: 13;
+}
 
 .join-us .item {
-  margin-bottom: 80px;
+  margin-bottom: 112px;
 }
 
 .join-us .item:last-child {
-  margin-bottom: 0;
-}
-
-.container {
-  margin: 0 auto;
-  max-width: 1152px;
+  margin-bottom: 224;
 }
 
 .join-us .item .title {
-  font-size: 112px;
+  font-family: "Colfax";
+  font-size: 84px;
   font-weight: 400;
-  margin: 0 0 40px 0;
+  margin-bottom: 42px;
+  text-align: left;
 }
 
 .join-us .item .content {
   display: grid;
   grid-column-gap: 28px;
+  grid-template-columns: repeat(8, [col] 1fr);
 }
 
 .join-us .item .content p {
-  grid-column: 1 / span 4;
+  grid-column-start: 1;
+  grid-column-end: 6;
+
+  font-family: "Colfax";
+  font-size: 20px;
+  color: #403f4c;
 }
 
+.has-text-primary {
+  color: blue;
+}
+
+/*  */
 .challenge .columns {
   display: grid;
   grid-template-columns: repeat(12, [col] 1fr);
@@ -302,7 +269,7 @@
 }
 
 .our-camper .container {
-  max-width: 1147;
+  max-width: 1147px;
   margin: 0 auto;
   border: solid 5px black;
 }
