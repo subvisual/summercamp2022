@@ -11,17 +11,17 @@
   border: 5px solid red;
 }
 
-h2 {
+.join-us h2 {
   text-align: left;
   margin-bottom: 50px;
   margin-top: 50px;
 }
 
-p {
+/* p {
   font-style: italic;
-}
+} */
 
-.container1 {
+.join-us {
   display: grid;
   grid-template-columns: auto auto;
 }
@@ -50,4 +50,470 @@ p {
 .textbox {
   padding-left: 50px;
   margin-left: 50px;
+}
+
+.join-us .left {
+  grid-column: span 4;
+}
+
+.join-us .right {
+  grid-column: span 8;
+}
+
+.join-us .columns {
+  display: grid;
+  grid-column-gap: 28px;
+  grid-template-columns: repeat(12, [col] 1fr);
+}
+
+.join-us .item {
+  margin-bottom: 80px;
+}
+
+.join-us .item:last-child {
+  margin-bottom: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1152px;
+}
+
+.join-us .item .title {
+  font-size: 112px;
+  font-weight: 400;
+  margin: 0 0 40px 0;
+}
+
+.join-us .item .content {
+  display: grid;
+  grid-column-gap: 28px;
+}
+
+.join-us .item .content p {
+  grid-column: 1 / span 4;
+}
+
+.challenge .columns {
+  display: grid;
+  grid-template-columns: repeat(12, [col] 1fr);
+  grid-column-gap: 28px;
+}
+.challenge .containerTittle {
+  grid-column: span 6;
+}
+
+.challenge .containerText {
+  grid-row: 2;
+  grid-column: span 10;
+}
+
+.challenge .content p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.challenge .tittle {
+  font-size: 84px;
+  font-weight: 400;
+}
+
+.if-you-like .columns {
+  display: grid;
+  grid-column-gap: 28px;
+  grid-template-columns: repeat(12, [col] 1fr);
+}
+.if-you-like .left h2 {
+  font-size: 56px;
+  line-height: 64px;
+  font-weight: 400;
+}
+.if-you-like .container .left {
+  grid-column: span 3;
+  grid-row: 2 / 3;
+}
+.if-you-like .container .right {
+  grid-column-start: 6;
+  grid-column-end: 12;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.if-you-like .container .right p {
+  font-size: 56px;
+  font-weight: 400;
+  color: #045cfc;
+}
+
+.your-opportunity .container-opportunity {
+  display: flex;
+  justify-content: left;
+}
+
+/* .container-opportunity > div {
+  border-radius: 28px;
+  width: 277px;
+  height: 160px;
+  padding: 42px;
+  font-family: "Colfax";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+  color: #ffffff;
+  margin: 0px 10px;
+} */
+
+.container-opportunity .item-01 {
+  background-color: #045cfc;
+  border-radius: 28px;
+  width: 211px;
+  height: 160px;
+  padding-top: 42px;
+  padding-left: 42px;
+
+  font-family: "Colfax";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+  color: #ffffff;
+  margin: 0px 10px;
+  align-items: center;
+}
+.container-opportunity .item-02 {
+  background-color: #2421ab;
+  border-radius: 28px;
+  width: 242px;
+  height: 160px;
+  padding-top: 42px;
+  padding-left: 42px;
+
+  font-family: "Colfax";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+  color: #ffffff;
+  margin: 0px 10px;
+  align-items: center;
+}
+.container-opportunity .item-03 {
+  background-color: #9563ff;
+  border-radius: 28px;
+  width: 277px;
+  height: 160px;
+  padding-top: 42px;
+  padding-left: 42px;
+
+  font-family: "Colfax";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+  color: #ffffff;
+  margin: 0px 10px;
+  align-items: center;
+}
+
+.your-opportunity .container .title {
+  display: block;
+  width: 685px;
+  height: 64px;
+  margin-left: 147px;
+  margin-bottom: 84px;
+  /* border: 1px solid black; */
+}
+.your-opportunity .container .title h2 {
+  font-family: "Colfax";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  margin: 0;
+}
+.dont-just-take .textbox {
+  display: block;
+  width: 1148px;
+  height: 704px;
+  padding: 0;
+  margin-left: 146px;
+  margin-right: 146px;
+  margin-top: 84px;
+  margin-bottom: 224;
+  background-color: #e8f4ff;
+}
+.dont-just-take .title {
+  display: block;
+  width: 654px;
+  height: 128px;
+  margin-left: 147px;
+  margin-top: 224px;
+}
+
+.dont-just-take .title h2 {
+  font-family: "Colfax";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  align-items: initial;
+}
+
+.dont-just-take .textbox .content-text {
+  width: 657px;
+  height: 240 px;
+  margin-left: 395px;
+  margin-top: 112px;
+  /* background-color: #9563ff; */
+  position: absolute;
+}
+
+.dont-just-take .textbox .content-text p {
+  margin: 0;
+  font-family: "Acta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.dont-just-take .textbox .author {
+  position: absolute;
+  width: 658px;
+  height: 56px;
+  margin-left: 393px;
+  margin-top: 394px;
+  /* background-color: #deddea; */
+}
+
+.dont-just-take .textbox .author p {
+  color: #403f4c;
+  font-family: "Colfax";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+}
+
+.your-opportunity .caixa {
+  margin-left: 147px;
+  width: 1089px;
+  align-items: left;
+}
+
+.our-camper .container {
+  max-width: 1147;
+  margin: 0 auto;
+  border: solid 5px black;
+}
+.our-camper .columns {
+  display: grid;
+  grid-column-gap: 28px;
+  grid-template-columns: repeat(12, [col] 1fr);
+  border: #045cfc 5px solid;
+}
+
+.our-camper .columns .title {
+  font-family: "Colfax";
+  font-size: 56px;
+  font-weight: 400;
+  border: #045cfc 5px solid;
+  margin-bottom: 113px;
+  grid-column-start: 1;
+  grid-column-end: 7;
+}
+
+.columns .quadrado {
+  grid-column-start: 7;
+  grid-column-end: 13;
+}
+
+.columns .right {
+  grid-column: 1 / span 6;
+}
+
+.columns .left {
+  grid-column: 7 / span 6;
+  display: flex;
+}
+.columnshalf {
+  display: grid;
+  grid-column-gap: 28px;
+  grid-template-columns: repeat(6, [col] 1fr);
+  width: 100%;
+}
+
+.columnshalf .subtitle {
+  grid-column-start: 2;
+  grid-column-end: 6;
+  border: red solid 5px;
+  font-family: "Colfax";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.columnshalf .sub-subtitle {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  border: red solid 5px;
+  font-family: "Acta";
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.columnshalf .text {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  border: red solid 5px;
+  font-family: "Colfax";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.columnshalf .empty-box {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  border: 1px solid #403f4c;
+  border-radius: 14px;
+  width: 100%;
+}
+
+.columnshalf .subtitle-left {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  border: red solid 5px;
+  font-family: "Colfax";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.columnshalf .sub-subtitle-left {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  border: red solid 5px;
+  font-family: "Acta";
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.columnshalf .text-left {
+  grid-column-start: 2;
+  grid-column-end: 7;
+  border: red solid 5px;
+  font-family: "Colfax";
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* Blue-box */
+
+.blue-box .container {
+  max-width: 1147px;
+  margin: 0 auto;
+  border: solid 5px red;
+}
+.blue-box .columns {
+  background-color: #2421ab;
+  color: white;
+  border-radius: 28px;
+  border: 1px solid #2421ab;
+  display: grid;
+  grid-column-gap: 28px;
+  grid-template-columns: repeat(12, [col] 1fr);
+}
+.blue-box .columns .left {
+  grid-column: 1 / span 6;
+}
+
+.blue-box .columns .right {
+  grid-column: 7 / span 6;
+}
+
+.blue-box-title {
+  grid-column: 3 / span 8;
+  font-family: "Colfax";
+  font-size: 56px;
+  margin-top: 112px;
+  margin-bottom: 56px;
+}
+
+.boxes-container {
+  grid-column: 3 / span 8;
+  display: inline-block;
+}
+
+.boxes {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 28px;
+  font-size: 28px;
+  font-family: "Colfax";
+  color: white;
+}
+
+.boxes:first-child {
+  margin-bottom: 28px;
+}
+.boxes .box {
+  background-color: #2421ab;
+  border-radius: 28px;
+  border: 1px solid white;
+  margin: 0;
+  padding: 28px;
+  flex: 1;
+}
+
+.boxes:last-child {
+  margin-bottom: 200px;
+}
+
+/* Some Questions */
+.some-questions .container {
+  max-width: 1147px;
+  margin: 0 auto;
+  border: solid 5px pink;
+}
+
+.some-questions .columns {
+  display: grid;
+  grid-column-gap: 28px;
+  grid-template-columns: repeat(12, [col] 1fr);
+}
+
+.some-questions .columns h2 {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  font-family: "Colfax";
+  font-size: 56px;
+  padding-bottom: 112px;
+}
+
+.some-questions .columns h3 {
+  grid-column-start: 1;
+  grid-column-end: 7;
+  font-family: "Acta";
+  font-size: 28px;
+  color: #403f4c;
+  padding-bottom: 28px;
+}
+
+.some-questions .columns .box-text {
+  grid-column-start: 1;
+  grid-column-end: 10;
+  font-family: "Colfax";
+  font-size: 20px;
+  color: #403f4c;
+  padding-bottom: 42px;
+}
+
+hr {
+  border: 0;
+  grid-column: 1 / span 12;
+  border-top: 1px solid #403f4c;
+  padding-bottom: 28px;
+}
+
+.some-questions .columns svg {
+  grid-column-start: 12;
 }
