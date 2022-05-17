@@ -442,36 +442,52 @@
   border: solid 5px pink;
 }
 
-.some-questions .columns {
+.some-questions .top {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  padding-bottom: 112px;
+}
+
+.some-questions .title {
+  font-family: "Colfax";
+  font-size: 56px;
+}
+
+.some-questions .questions {
+  grid-column: span 12;
+  padding-bottom: 28px;
+}
+
+.some-questions .question-header {
   display: grid;
   grid-column-gap: 28px;
   grid-template-columns: repeat(12, [col] 1fr);
 }
 
-.some-questions .columns h2 {
-  grid-column-start: 1;
-  grid-column-end: 8;
-  font-family: "Colfax";
-  font-size: 56px;
-  padding-bottom: 112px;
+.some-questions .question-header .title {
+  grid-column: span 8;
 }
 
-.some-questions .columns h3 {
-  grid-column-start: 1;
-  grid-column-end: 7;
+.some-questions .question-header .toggle {
+  grid-column: 11 / 12;
+  cursor: pointer;
+}
+
+.some-questions .question .title {
   font-family: "Acta";
   font-size: 28px;
   color: #403f4c;
-  padding-bottom: 28px;
 }
 
-.some-questions .columns .box-text {
-  grid-column-start: 1;
-  grid-column-end: 10;
+.some-questions .question .text {
+  grid-column: span 12;
   font-family: "Colfax";
   font-size: 20px;
   color: #403f4c;
-  padding-bottom: 42px;
+}
+
+.is-hidden {
+  display: none;
 }
 
 hr {

@@ -12,8 +12,10 @@ function Nav() {
   return (
     <nav>
       <div className="flex-container">
-        {navLinks.map((link) => (
-          <Link href={link.url}>{link.label}</Link>
+        {navLinks.map((link, index) => (
+          <Link key={index} href={link.url}>
+            {link.label}
+          </Link>
         ))}
       </div>
     </nav>

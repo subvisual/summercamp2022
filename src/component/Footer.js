@@ -7,8 +7,8 @@ const addresses = [
 function Footer() {
   return (
     <footer>
-      {addresses.map((contact) => (
-        <p>
+      {addresses.map((contact, index) => (
+        <p key={index}>
           {" "}
           {contact.nome} - {contact.contacto}
         </p>

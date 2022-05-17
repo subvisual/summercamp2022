@@ -3,12 +3,8 @@ import ReactDOM from "react-dom";
 import "./index.css";
 // import App from "/home/rita/summercamp/src/pages/App.js";
 import reportWebVitals from "./reportWebVitals";
-import PastCohort from "/home/rita/summercamp/src/pages/PastCohort.js";
-import { BrowserRouter, Routes, Link, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import AboutUs from "./pages/AboutUs";
-import Contact from "./pages/Contact";
-import Blog from "./pages/Blog";
 import Layout from "./component/Layout";
 
 ReactDOM.render(
@@ -16,10 +12,6 @@ ReactDOM.render(
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/pastCohort" element={<PastCohort />}></Route>
-        <Route path="/aboutUs" element={<AboutUs />}></Route>
-        <Route path="/blog" element={<Blog />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
     </Layout>
   </BrowserRouter>,

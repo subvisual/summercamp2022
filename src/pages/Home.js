@@ -3,9 +3,74 @@ import "./Home.css";
 
 import Nav from "../component/Nav";
 import Footer from "../component/Footer";
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
+
+const QUESTIONS = [
+  {
+    id: "1",
+    title: "lorem ipsum",
+    text: "lorem ipsum dolor sit amet",
+    open: false,
+  },
+  {
+    id: "2",
+    title: "lorem ipsum",
+    text: "lorem ipsum dolor sit amet",
+    open: false,
+  },
+  {
+    id: "3",
+    title: "lorem ipsum",
+    text: "lorem ipsum dolor sit amet",
+    open: false,
+  },
+  {
+    id: "4",
+    title: "lorem ipsum",
+    text: "lorem ipsum dolor sit amet",
+    open: false,
+  },
+];
+
+function Question(props) {
+  return (
+    <div className="question">
+      <div className="question-header">
+        <h3 className="title">{props.question.title}</h3>
+        <div className="toggle" onClick={props.onToggle}>
+          <svg
+            width="18"
+            height="11"
+            viewBox="0 0 18 11"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M2 2L9 9L16 2"
+              stroke="#403F4C"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div className={"text" + (!props.question.open ? " is-hidden" : "")}>
+        <p>{props.question.text}</p>
+      </div>
+    </div>
+  );
+}
 
 function Home() {
+  const [questions, setQuestions] = useState(QUESTIONS);
+
+  function toggleQuestion(questionId) {
+    setQuestions(
+      questions.map((q) => (q.id === questionId ? { ...q, open: !q.open } : q))
+    );
+  }
+
   return (
     <Fragment>
       <div class="join-us">
@@ -292,90 +357,24 @@ function Home() {
           </div>
         </div>
       </div>
+
       <div className="some-questions">
         <div className="container">
           <div className="columns">
-            <h2 className="title">Some questions we are usually asked</h2>
-            <h3 className="subtitle">Lorem ipsum dolor sit amet? </h3>
-            <svg
-              width="18"
-              height="11"
-              viewBox="0 0 18 11"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2 2L9 9L16 2"
-                stroke="#403F4C"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-            <div className="box-text">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt <br /> ut labore et dolore magna
-                aliqua. Ut enim ad minim veniam, quis nostrud exercitation{" "}
-                <br />
-                ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
+            <div className="top">
+              <h2 className="title">Some questions we are usually asked</h2>
             </div>
-            <hr></hr>
-            <h3 className="subtitle">Lorem ipsum dolor sit amet? </h3>
-            <svg
-              width="18"
-              height="11"
-              viewBox="0 0 18 11"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2 2L9 9L16 2"
-                stroke="#403F4C"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-
-            <hr></hr>
-            <h3 className="subtitle">Lorem ipsum dolor sit amet? </h3>
-            <svg
-              width="18"
-              height="11"
-              viewBox="0 0 18 11"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2 2L9 9L16 2"
-                stroke="#403F4C"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-
-            <hr></hr>
-            <h3 className="subtitle">Lorem ipsum dolor sit amet? </h3>
-            <svg
-              width="18"
-              height="11"
-              viewBox="0 0 18 11"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M2 2L9 9L16 2"
-                stroke="#403F4C"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-
-            <hr></hr>
+            <div className="questions">
+              {questions.map((question, index) => {
+                return (
+                  <Question
+                    key={index}
+                    question={question}
+                    onToggle={() => toggleQuestion(question.id)}
+                  />
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
