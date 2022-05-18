@@ -32,6 +32,24 @@ const QUESTIONS = [
   },
 ];
 
+const TESTIMONIALS = [
+  {
+    text: "The SummerCamp was the perfect opportunity to validate my wish to pursue a career in Product Management as it provided me with a real life work experience. Additionally, being surrounded by other talented people from all background who shared a common vision, made this an unforgetable summer.",
+    author: "Álvaro Bezerra",
+    info: "Summer Camp 2020",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis repudiandae id nisi inventore ipsum omnis impedit blanditiis voluptatum eveniet fuga corrupti, ducimus velit veritatis quasi ipsa soluta ad ratione sed!",
+    author: "Álvaro Bezerra",
+    info: "Summer Camp 2020",
+  },
+  {
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis repudiandae id nisi inventore ipsum omnis impedit blanditiis voluptatum eveniet fuga corrupti, ducimus velit veritatis quasi ipsa soluta ad ratione sed!",
+    author: "John Doe",
+    info: "Summer Camp 2020",
+  },
+];
+
 function Question(props) {
   return (
     <div className="question">
@@ -64,6 +82,7 @@ function Question(props) {
 
 function Home() {
   const [questions, setQuestions] = useState(QUESTIONS);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   function toggleQuestion(questionId) {
     setQuestions(
@@ -71,58 +90,71 @@ function Home() {
     );
   }
 
+  function slideLeft() {
+    setCurrentSlide(
+      currentSlide - 1 < 0 ? TESTIMONIALS.length - 1 : currentSlide - 1
+    );
+  }
+
+  function slideRight() {
+    setCurrentSlide((currentSlide + 1) % TESTIMONIALS.length);
+  }
+
   return (
     <Fragment>
-      <div class="join-us">
-        <div className="container">
-          <div className="columns">
-            <div className="join-us-left">
-              <h2 className="title">Join us</h2>
-            </div>
+      <div className="join-us">
+        <div className="box">
+          <div className="container">
+            <div className="columns">
+              <div className="join-us-left">
+                <h2 className="title">Join us</h2>
+              </div>
 
-            <div className="join-us-right">
-              <div className="item">
-                <h2 className="title">
-                  <span>on a</span>
-                  <span className="has-text-primary"> hands-on </span>
-                  <span>approach</span>
-                </h2>
-                <div className="content">
-                  <p>
-                    We created SummerCamp back in 2016 as a way to foster
-                    talent, get new work perspectives and contribute to boosting
-                    new career opportunities. We believe in continuous learning
-                    and improvement, so SummerCamp is yet another way of us
-                    acting on those values
-                  </p>
+              <div className="join-us-right">
+                <div className="item">
+                  <h2 className="title">
+                    <span>on a</span>
+                    <span className="has-text-primary"> hands-on </span>
+                    <span>approach</span>
+                  </h2>
+                  <div className="content">
+                    <p>
+                      We created SummerCamp back in 2016 as a way to foster
+                      talent, get new work perspectives and contribute to
+                      boosting new career opportunities. We believe in
+                      continuous learning and improvement, so SummerCamp is yet
+                      another way of us acting on those values
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="item">
-                <h2 className="title">
-                  <span>to get a </span>
-                  <span className="has-text-primary"> real work </span>
-                  <span>experience</span>
-                </h2>
-                <div className="content">
-                  <p>
-                    Whether you want to follow a career in technology or
-                    product, during your time at SummerCamp you'll get access to
-                    a real use case that will help you understand how a job in
-                    that area could be like.
-                  </p>
+                <div className="item">
+                  <h2 className="title">
+                    <span>to get a </span>
+                    <span className="has-text-primary"> real work </span>
+                    <span>experience</span>
+                  </h2>
+                  <div className="content">
+                    <p>
+                      Whether you want to follow a career in technology or
+                      product, during your time at SummerCamp you'll get access
+                      to a real use case that will help you understand how a job
+                      in that area could be like.
+                    </p>
+                  </div>
                 </div>
-              </div>
-              <div className="item">
-                <h2 className="title">
-                  <span> with the support of a </span>
-                  <span className="has-text-primary"> great team</span>
-                </h2>
-                <div className="content">
-                  <p>
-                    Our team members will be your mentors during the entire
-                    program, wich means that you will always have someone to
-                    back your decisions and help you choose wich path to follow
-                  </p>
+                <div className="item">
+                  <h2 className="title">
+                    <span> with the support of a </span>
+                    <span className="has-text-primary"> great team</span>
+                  </h2>
+                  <div className="content">
+                    <p>
+                      Our team members will be your mentors during the entire
+                      program, wich means that you will always have someone to
+                      back your decisions and help you choose wich path to
+                      follow
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -197,46 +229,73 @@ function Home() {
         <div className="container">
           <div className="columns">
             <div className="title">
-              <h2 className="content-title">
-                But don´t just take our
-                <br /> word for it
+              <h2>
+                But don't just take our
+                <br />
+                word for it
               </h2>
             </div>
-            <div className="textbox">
-              <div className="content-text">
-                <p>
-                  The SummerCamp was the perfect opportunity to <br />
-                  validate my wish to pursue a career in Product <br />
-                  Management as it provided me with a real life work <br />
-                  experience.Additionally,being surrounded by other <br />
-                  talented people from all background who shared a <br />
-                  common vision, made this an unforgetable summer.{" "}
-                </p>
-              </div>
-              <div className="author">
-                <p>
-                  Álvaro Bezerra
-                  <br />
-                  Summer Camp in2020
-                </p>
-              </div>
-              <div className="buttons">
-                <svg
-                  width="70"
-                  height="70"
-                  viewBox="0 0 70 70"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M0.499995 35C0.499997 15.9462 15.9462 0.500003 35 0.500005C54.0538 0.500006 69.5 15.9462 69.5 35C69.5 54.0538 54.0538 69.5 35 69.5C15.9462 69.5 0.499994 54.0538 0.499995 35Z"
-                    stroke="#045CFC"
-                  />
-                  <path
-                    d="M21.6464 34.6464C21.4512 34.8417 21.4512 35.1583 21.6464 35.3536L24.8284 38.5355C25.0237 38.7308 25.3403 38.7308 25.5355 38.5355C25.7308 38.3403 25.7308 38.0237 25.5355 37.8284L22.7071 35L25.5355 32.1716C25.7308 31.9763 25.7308 31.6597 25.5355 31.4645C25.3403 31.2692 25.0237 31.2692 24.8284 31.4645L21.6464 34.6464ZM48 34.5L22 34.5L22 35.5L48 35.5L48 34.5Z"
-                    fill="#045CFC"
-                  />
-                </svg>
+          </div>
+          <div className="box">
+            <div className="columns">
+              <div className="content">
+                {TESTIMONIALS.map((testimonial, index) => {
+                  return (
+                    <div
+                      key={index}
+                      className={
+                        "testimonial" +
+                        (currentSlide !== index ? " is-hidden" : "")
+                      }
+                    >
+                      <div className="text">
+                        <p>{testimonial.text}</p>
+                      </div>
+                      <div className="author">
+                        <p>{testimonial.author}</p>
+                        <p>{testimonial.info}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+                <div className="buttons">
+                  <div className="button-left" onClick={slideLeft}>
+                    <svg
+                      width="70"
+                      height="70"
+                      viewBox="0 0 70 70"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.499995 35C0.499997 15.9462 15.9462 0.500003 35 0.500005C54.0538 0.500006 69.5 15.9462 69.5 35C69.5 54.0538 54.0538 69.5 35 69.5C15.9462 69.5 0.499994 54.0538 0.499995 35Z"
+                        stroke="#045CFC"
+                      />
+                      <path
+                        d="M21.6464 34.6464C21.4512 34.8417 21.4512 35.1583 21.6464 35.3536L24.8284 38.5355C25.0237 38.7308 25.3403 38.7308 25.5355 38.5355C25.7308 38.3403 25.7308 38.0237 25.5355 37.8284L22.7071 35L25.5355 32.1716C25.7308 31.9763 25.7308 31.6597 25.5355 31.4645C25.3403 31.2692 25.0237 31.2692 24.8284 31.4645L21.6464 34.6464ZM48 34.5L22 34.5L22 35.5L48 35.5L48 34.5Z"
+                        fill="#045CFC"
+                      />
+                    </svg>
+                  </div>
+                  <div className="button-right" onClick={slideRight}>
+                    <svg
+                      width="70"
+                      height="70"
+                      viewBox="0 0 70 70"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M0.499995 35C0.499997 15.9462 15.9462 0.500003 35 0.500005C54.0538 0.500006 69.5 15.9462 69.5 35C69.5 54.0538 54.0538 69.5 35 69.5C15.9462 69.5 0.499994 54.0538 0.499995 35Z"
+                        stroke="#045CFC"
+                      />
+                      <path
+                        d="M21.6464 34.6464C21.4512 34.8417 21.4512 35.1583 21.6464 35.3536L24.8284 38.5355C25.0237 38.7308 25.3403 38.7308 25.5355 38.5355C25.7308 38.3403 25.7308 38.0237 25.5355 37.8284L22.7071 35L25.5355 32.1716C25.7308 31.9763 25.7308 31.6597 25.5355 31.4645C25.3403 31.2692 25.0237 31.2692 24.8284 31.4645L21.6464 34.6464ZM48 34.5L22 34.5L22 35.5L48 35.5L48 34.5Z"
+                        fill="#045CFC"
+                      />
+                    </svg>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

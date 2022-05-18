@@ -1,11 +1,16 @@
-/* Join-us */
-
-.join-us .container {
+.container {
   margin: 0 auto;
   max-width: 1152px;
+}
+
+/* Join-us */
+
+.join-us .box {
   background-color: #e8f4ff;
   border-radius: 60px;
+  margin: 0 100px;
 }
+
 .join-us .columns {
   display: grid;
   grid-column-gap: 28px;
@@ -189,6 +194,7 @@
   margin-bottom: 84px;
   /* border: 1px solid black; */
 }
+
 .your-opportunity .container .title h2 {
   font-family: "Colfax";
   font-style: normal;
@@ -197,41 +203,42 @@
   line-height: 64px;
   margin: 0;
 }
+
 .dont-just-take .textbox {
-  display: block;
-  width: 1148px;
-  height: 704px;
-  padding: 0;
-  margin-left: 146px;
-  margin-right: 146px;
-  margin-top: 84px;
-  margin-bottom: 224;
   background-color: #e8f4ff;
 }
-.dont-just-take .title {
-  display: block;
-  width: 654px;
-  height: 128px;
-  margin-left: 147px;
-  margin-top: 224px;
+
+.dont-just-take .columns {
+  display: grid;
+  grid-column-gap: 28px;
+  grid-template-columns: repeat(12, [col] 1fr);
 }
 
+.dont-just-take .title {
+  grid-column: span 7;
+}
 .dont-just-take .title h2 {
   font-family: "Colfax";
-  font-style: normal;
-  font-weight: 400;
   font-size: 56px;
   line-height: 64px;
-  align-items: initial;
 }
 
-.dont-just-take .textbox .content-text {
-  width: 657px;
-  height: 240 px;
-  margin-left: 395px;
-  margin-top: 112px;
-  /* background-color: #9563ff; */
-  position: absolute;
+.dont-just-take .box {
+  background-color: #e8f4ff;
+  border-radius: 28px;
+  padding: 112px 0;
+}
+
+.dont-just-take .content {
+  grid-column: 5 / 12;
+}
+
+.dont-just-take .text {
+  margin-bottom: 42px;
+}
+
+.dont-just-take .author {
+  margin-bottom: 72px;
 }
 
 .dont-just-take .textbox .content-text p {
@@ -244,12 +251,6 @@
 }
 
 .dont-just-take .textbox .author {
-  position: absolute;
-  width: 658px;
-  height: 56px;
-  margin-left: 393px;
-  margin-top: 394px;
-  /* background-color: #deddea; */
 }
 
 .dont-just-take .textbox .author p {
@@ -263,8 +264,6 @@
 }
 
 .your-opportunity .caixa {
-  margin-left: 147px;
-  width: 1089px;
   align-items: left;
 }
 
