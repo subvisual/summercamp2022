@@ -1,15 +1,22 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Variables */
+
+:root {
+  --color-black: #1a1a1a;
+  --color-grey: #403f4c;
+  --color-white: #fff;
+  --color-blue: #045cfc;
+  --color-blue-dark: #2421ab;
+  --color-blue-light: #e8f4ff;
+  --color-purple: #9563ff;
+  --grid-gap: 28px;
+  --max-width-desktop: 1152px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* Reset */
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 * {
@@ -18,4 +25,41 @@ code {
   font-size: inherit;
   font-weight: normal;
   box-sizing: border-box;
+}
+
+/* Global */
+
+.container {
+  margin: 0 auto;
+  max-width: var(--max-width-desktop);
+}
+
+.columns {
+  display: grid;
+  grid-column-gap: var(--grid-gap);
+  grid-template-columns: repeat(12, [col] 1fr);
+}
+
+.is-hidden {
+  display: none;
+}
+
+.has-text-blue {
+  color: var(--color-blue);
+}
+
+.has-background-blue {
+  background-color: var(--color-blue);
+}
+
+.has-background-blue-dark {
+  background-color: var(--color-blue-dark);
+}
+
+.has-background-blue-light {
+  background-color: var(--color-blue-light);
+}
+
+.has-background-purple {
+  background-color: var(--color-purple);
 }

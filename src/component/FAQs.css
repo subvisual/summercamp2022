@@ -1,0 +1,12 @@
+.question .left {
+  grid-column: span 8;
+}
+
+.question .right {
+  grid-column: 12 / 12;
+  cursor: pointer;
+}
+
+.question .content {
+  grid-column: span 12;
+}

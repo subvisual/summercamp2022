@@ -1,0 +1,28 @@
+.testimonials {
+  border-radius: 28px;
+  padding: 112px 0;
+}
+
+.testimonials .content {
+  grid-column: 5 / 12;
+}
+
+.testimonials .text {
+  margin-bottom: 42px;
+}
+
+.testimonials .author {
+  margin-bottom: 72px;
+}
+
+.testimonials .buttons {
+  display: inline-flex;
+}
+
+.testimonials .buttons > * {
+  cursor: pointer;
+}
+
+.testimonials .buttons > *:first-child {
+  margin-right: 40px;
+}

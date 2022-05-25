@@ -1,29 +1,21 @@
-.container {
-  margin: 0 auto;
-  max-width: 1152px;
-}
-
-.join-us .box {
-  background-color: #e8f4ff;
+.fold {
   border-radius: 60px;
-  margin: 0 100px;
+  max-width: 1324px;
+  margin: 0 auto 224px;
+  padding-top: 45px;
 }
 
-.join-us .columns {
-  display: grid;
-  grid-column-gap: 28px;
-  grid-template-columns: repeat(12, [col] 1fr);
+.join-us {
+  margin-top: 210px;
 }
-.columns .join-us-left {
-  grid-column-start: 1;
-  grid-column-end: 4;
+
+.join-us .left {
+  grid-column: span 4;
   font-family: "Colfax";
   font-size: 84px;
-  color: #403f4c;
-  text-align: left;
 }
 
-.columns .join-us-right {
+.join-us .right {
   grid-column-start: 5;
   grid-column-end: 13;
 }
@@ -33,396 +25,67 @@
 }
 
 .join-us .item:last-child {
-  margin-bottom: 224;
+  margin-bottom: 224px;
 }
 
 .join-us .item .title {
   font-family: "Colfax";
   font-size: 84px;
-  font-weight: 400;
   margin-bottom: 42px;
-  text-align: left;
 }
 
-.join-us .item .content {
-  display: grid;
-  grid-column-gap: 28px;
-  grid-template-columns: repeat(8, [col] 1fr);
+.join-us .item .text {
+  max-width: 460px;
 }
 
-.join-us .item .content p {
-  grid-column-start: 1;
-  grid-column-end: 6;
-
-  font-family: "Colfax";
-  font-size: 20px;
-  color: #403f4c;
-}
-
-.has-text-primary {
-  color: blue;
-}
-
-/*  */
-.challenge .columns {
-  display: grid;
-  grid-template-columns: repeat(12, [col] 1fr);
-  grid-column-gap: 28px;
-}
-.challenge .containerTittle {
-  grid-column: span 6;
-}
-
-.challenge .containerText {
-  grid-row: 2;
-  grid-column: span 10;
-}
-
-.challenge .content p {
-  font-size: 20px;
-  font-weight: 400;
-}
-.challenge .tittle {
-  font-size: 84px;
-  font-weight: 400;
-}
-
-.if-you-like .columns {
-  display: grid;
-  grid-column-gap: 28px;
-  grid-template-columns: repeat(12, [col] 1fr);
-}
-.if-you-like .left h2 {
-  font-size: 56px;
-  line-height: 64px;
-  font-weight: 400;
-}
-.if-you-like .container .left {
-  grid-column: span 3;
-  grid-row: 2 / 3;
-}
-.if-you-like .container .right {
-  grid-column-start: 6;
-  grid-column-end: 12;
-  grid-row-start: 1;
-  grid-row-end: 4;
-}
-.if-you-like .container .right p {
-  font-size: 56px;
-  font-weight: 400;
-  color: #045cfc;
-}
-
-.your-opportunity .container-opportunity {
-  display: flex;
-  justify-content: left;
-}
-
-.container-opportunity .item-01 {
-  background-color: #045cfc;
-  border-radius: 28px;
-  width: 211px;
-  height: 160px;
-  padding-top: 42px;
-  padding-left: 42px;
-
-  font-family: "Colfax";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 40px;
-  color: #ffffff;
-  margin: 0px 10px;
-  align-items: center;
-}
-.container-opportunity .item-02 {
-  background-color: #2421ab;
-  border-radius: 28px;
-  width: 242px;
-  height: 160px;
-  padding-top: 42px;
-  padding-left: 42px;
-
-  font-family: "Colfax";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 40px;
-  color: #ffffff;
-  margin: 0px 10px;
-  align-items: center;
-}
-.container-opportunity .item-03 {
-  background-color: #9563ff;
-  border-radius: 28px;
-  width: 277px;
-  height: 160px;
-  padding-top: 42px;
-  padding-left: 42px;
-
-  font-family: "Colfax";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 40px;
-  color: #ffffff;
-  margin: 0px 10px;
-  align-items: center;
-}
-
-.your-opportunity .container .title {
-  display: block;
-  width: 685px;
-  height: 64px;
-  margin-left: 147px;
+.dont-just-take .top {
+  grid-column: span 12;
   margin-bottom: 84px;
-  /* border: 1px solid black; */
 }
 
-.your-opportunity .container .title h2 {
-  font-family: "Colfax";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 56px;
-  line-height: 64px;
-  margin: 0;
+.dont-just-take .bottom {
+  grid-column: span 12;
 }
 
-.dont-just-take .textbox {
-  background-color: #e8f4ff;
+.how-it-works {
+  color: var(--color-white);
+  margin-bottom: 224px;
 }
 
-.dont-just-take .columns {
-  display: grid;
-  grid-column-gap: 28px;
-  grid-template-columns: repeat(12, [col] 1fr);
-}
-
-.dont-just-take .title {
-  grid-column: span 7;
-}
-.dont-just-take .title h2 {
-  font-family: "Colfax";
-  font-size: 56px;
-  line-height: 64px;
-}
-
-.dont-just-take .box {
-  background-color: #e8f4ff;
+.how-it-works .background {
   border-radius: 28px;
   padding: 112px 0;
 }
 
-.dont-just-take .content {
-  grid-column: 5 / 12;
-}
-
-.dont-just-take .text {
-  margin-bottom: 42px;
-}
-
-.dont-just-take .author {
-  margin-bottom: 72px;
-}
-
-.dont-just-take .textbox .content-text p {
-  margin: 0;
-  font-family: "Acta";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 40px;
-}
-
-.dont-just-take .textbox .author {
-}
-
-.dont-just-take .textbox .author p {
-  color: #403f4c;
-  font-family: "Colfax";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  margin: 0;
-}
-
-.your-opportunity .caixa {
-  align-items: left;
-}
-
-.our-camper .container {
-  max-width: 1147px;
-  margin: 0 auto;
-  border: solid 5px black;
-}
-.our-camper .columns {
-  display: grid;
-  grid-column-gap: 28px;
-  grid-template-columns: repeat(12, [col] 1fr);
-  border: #045cfc 5px solid;
-}
-
-.our-camper .columns .title {
-  font-family: "Colfax";
-  font-size: 56px;
-  font-weight: 400;
-  border: #045cfc 5px solid;
-  margin-bottom: 113px;
-  grid-column-start: 1;
-  grid-column-end: 7;
-}
-
-.columns .quadrado {
-  grid-column-start: 7;
-  grid-column-end: 13;
-}
-
-.columns .right {
-  grid-column: 1 / span 6;
-}
-
-.columns .left {
-  grid-column: 7 / span 6;
-  display: flex;
-}
-.columnshalf {
-  display: grid;
-  grid-column-gap: 28px;
-  grid-template-columns: repeat(6, [col] 1fr);
-  width: 100%;
-}
-
-.columnshalf .subtitle {
-  grid-column-start: 2;
-  grid-column-end: 6;
-  border: red solid 5px;
-  font-family: "Colfax";
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.columnshalf .sub-subtitle {
-  grid-column-start: 1;
-  grid-column-end: 6;
-  border: red solid 5px;
-  font-family: "Acta";
-  font-size: 28px;
-  font-weight: 400;
-}
-
-.columnshalf .text {
-  grid-column-start: 1;
-  grid-column-end: 6;
-  border: red solid 5px;
-  font-family: "Colfax";
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.columnshalf .empty-box {
-  grid-column-start: 1;
-  grid-column-end: 7;
-  border: 1px solid #403f4c;
-  border-radius: 14px;
-  width: 100%;
-}
-
-.columnshalf .subtitle-left {
-  grid-column-start: 2;
-  grid-column-end: 7;
-  border: red solid 5px;
-  font-family: "Colfax";
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.columnshalf .sub-subtitle-left {
-  grid-column-start: 2;
-  grid-column-end: 7;
-  border: red solid 5px;
-  font-family: "Acta";
-  font-size: 28px;
-  font-weight: 400;
-}
-
-.columnshalf .text-left {
-  grid-column-start: 2;
-  grid-column-end: 7;
-  border: red solid 5px;
-  font-family: "Colfax";
-  font-size: 20px;
-  font-weight: 400;
-}
-
-/* Blue-box */
-
-.blue-box .container {
-  max-width: 1147px;
-  margin: 0 auto;
-  border: solid 5px red;
-}
-.blue-box .columns {
-  background-color: #2421ab;
-  color: white;
-  border-radius: 28px;
-  border: 1px solid #2421ab;
-  display: grid;
-  grid-column-gap: 28px;
-  grid-template-columns: repeat(12, [col] 1fr);
-}
-.blue-box .columns .left {
-  grid-column: 1 / span 6;
-}
-
-.blue-box .columns .right {
-  grid-column: 7 / span 6;
-}
-
-.blue-box-title {
+.how-it-works .top {
   grid-column: 3 / span 8;
-  font-family: "Colfax";
-  font-size: 56px;
-  margin-top: 112px;
   margin-bottom: 56px;
 }
 
-.boxes-container {
+.how-it-works .content {
   grid-column: 3 / span 8;
-  display: inline-block;
 }
 
-.boxes {
+.how-it-works .row {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  gap: 28px;
-  font-size: 28px;
-  font-family: "Colfax";
-  color: white;
+  gap: var(--grid-gap);
 }
 
-.boxes:first-child {
+.how-it-works .row:first-child {
   margin-bottom: 28px;
 }
-.boxes .box {
-  background-color: #2421ab;
+
+.how-it-works .box {
   border-radius: 28px;
-  border: 1px solid white;
-  margin: 0;
+  border: 1px solid var(--color-white);
   padding: 28px;
   flex: 1;
 }
 
-.boxes:last-child {
-  margin-bottom: 200px;
-}
-
-/* Some Questions */
-.some-questions .container {
-  max-width: 1147px;
-  margin: 0 auto;
-  border: solid 5px pink;
+.some-questions {
+  margin-bottom: 224px;
 }
 
 .some-questions .top {
@@ -431,55 +94,65 @@
   padding-bottom: 112px;
 }
 
-.some-questions .title {
-  font-family: "Colfax";
-  font-size: 56px;
-}
-
-.some-questions .questions {
+.some-questions .bottom {
   grid-column: span 12;
-  padding-bottom: 28px;
 }
 
-.some-questions .question-header {
-  display: grid;
-  grid-column-gap: 28px;
-  grid-template-columns: repeat(12, [col] 1fr);
+.are-you-up .challenge .header {
+  grid-column: span 7;
+  margin-bottom: 42px;
 }
 
-.some-questions .question-header .title {
-  grid-column: span 8;
+.are-you-up .challenge .content {
+  grid-column: span 6;
 }
 
-.some-questions .question-header .toggle {
-  grid-column: 11 / 12;
-  cursor: pointer;
+.are-you-up .if-you-like {
+  margin: 220px 0;
 }
 
-.some-questions .question .title {
-  font-family: "Acta";
-  font-size: 28px;
-  color: #403f4c;
+.are-you-up .if-you-like .left {
+  grid-column: span 3;
+  grid-row: 2 / 3;
 }
 
-.some-questions .question .text {
-  grid-column: span 12;
-  font-family: "Colfax";
-  font-size: 20px;
-  color: #403f4c;
+.are-you-up .if-you-like .right {
+  grid-column: 5 / 13;
+  grid-row-start: 1;
+  grid-row-end: 4;
 }
 
-.is-hidden {
-  display: none;
+.are-you-up .your-opportunity {
+  margin-bottom: 224px;
 }
 
-hr {
-  border: 0;
-  grid-column: 1 / span 12;
-  border-top: 1px solid #403f4c;
-  padding-bottom: 28px;
+.are-you-up .your-opportunity .header {
+  margin-bottom: 84px;
 }
 
-.some-questions .columns svg {
-  grid-column-start: 12;
+.are-you-up .your-opportunity .item {
+  border-radius: 28px;
+  color: var(--color-white);
+  grid-column: span 4;
+  padding: 42px;
+}
+
+.are-you-up .your-opportunity .item .title {
+  margin-bottom: 42px;
+}
+
+.showcase {
+  margin: 224px 0;
+}
+
+.showcase .header {
+  grid-column: span 6;
+}
+
+.talk-to-us {
+  margin-bottom: 224px;
+}
+
+.onboard {
+  margin-bottom: 112px;
 }
