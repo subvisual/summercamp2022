@@ -1,19 +1,15 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-// import App from "/home/rita/summercamp/src/pages/App.js";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Layout from "./component/Layout";
 
 ReactDOM.render(
   <BrowserRouter basename="/summercamp2022">
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </Layout>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   </BrowserRouter>,
   document.getElementById("root")
 );

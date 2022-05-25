@@ -3,8 +3,6 @@
   max-width: 1152px;
 }
 
-/* Join-us */
-
 .join-us .box {
   background-color: #e8f4ff;
   border-radius: 60px;
@@ -119,20 +117,6 @@
   display: flex;
   justify-content: left;
 }
-
-/* .container-opportunity > div {
-  border-radius: 28px;
-  width: 277px;
-  height: 160px;
-  padding: 42px;
-  font-family: "Colfax";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  line-height: 40px;
-  color: #ffffff;
-  margin: 0px 10px;
-} */
 
 .container-opportunity .item-01 {
   background-color: #045cfc;
