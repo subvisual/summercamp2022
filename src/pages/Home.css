@@ -11,7 +11,6 @@
 
 .join-us .left {
   grid-column: span 4;
-  font-family: "Colfax";
   font-size: 84px;
 }
 
@@ -29,7 +28,6 @@
 }
 
 .join-us .item .title {
-  font-family: "Colfax";
   font-size: 84px;
   margin-bottom: 42px;
 }

@@ -1,3 +1,7 @@
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 /* Variables */
 
 :root {
@@ -10,6 +14,8 @@
   --color-purple: #9563ff;
   --grid-gap: 28px;
   --max-width-desktop: 1152px;
+  --font-primary: Roboto, sans-serif;
+  --font-secondary: Acta, serif;
 }
 
 /* Reset */
@@ -28,6 +34,10 @@ body {
 }
 
 /* Global */
+
+body {
+  font-family: var(--font-primary);
+}
 
 .container {
   margin: 0 auto;
@@ -62,4 +72,42 @@ body {
 
 .has-background-purple {
   background-color: var(--color-purple);
+}
+
+.has-font-family-secondary {
+  font-family: var(--font-secondary);
+}
+
+.has-font-size-xlarge {
+  font-size: 84px;
+  line-height: 92px;
+}
+
+.has-font-size-large {
+  font-size: 56px;
+  line-height: 64px;
+}
+
+.has-font-size-medium {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.has-font-size-small {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.button {
+  color: var(--color-blue);
+  border-radius: 180px;
+  border: solid 1px var(--color-blue);
+  padding: 28px 64px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
 }

@@ -73,7 +73,9 @@ export default function Testimonials(props) {
                 }
               >
                 <div className="text">
-                  <p>{testimonial.text}</p>
+                  <p className="has-font-family-secondary has-font-size-medium">
+                    {testimonial.text}
+                  </p>
                 </div>
                 <div className="author">
                   <p>{testimonial.author}</p>
