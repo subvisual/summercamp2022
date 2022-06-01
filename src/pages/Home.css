@@ -101,8 +101,25 @@
   margin-bottom: 42px;
 }
 
+.are-you-up .challenge .firstphoto {
+  grid-column: 8 / span 5;
+}
+.are-you-up .challenge .firstphoto img {
+  max-width: 100%;
+}
 .are-you-up .challenge .content {
   grid-column: span 6;
+  margin-bottom: 98.96px;
+}
+.are-you-up .challenge .secondphoto {
+  grid-column: span 8;
+}
+.are-you-up .challenge .firstphoto img {
+  max-width: 100%;
+  margin-bottom: 71.99px;
+}
+.are-you-up .challenge .title {
+  padding-bottom: 42px;
 }
 
 .are-you-up .if-you-like {
@@ -113,13 +130,23 @@
   grid-column: span 3;
   grid-row: 2 / 3;
 }
-
+.line {
+  width: 69px;
+  border-top: 1px solid #9563ff;
+}
+.are-you-up .if-you-like .line {
+  margin-right: 30px;
+}
 .are-you-up .if-you-like .right {
-  grid-column: 5 / 13;
+  grid-column: 6 / 13;
   grid-row-start: 1;
   grid-row-end: 4;
 }
 
+.are-you-up .if-you-like .item {
+  display: flex;
+  align-items: center;
+}
 .are-you-up .your-opportunity {
   margin-bottom: 224px;
 }
@@ -129,6 +156,8 @@
 }
 
 .are-you-up .your-opportunity .item {
+  display: flex;
+  align-items: center;
   border-radius: 28px;
   color: var(--color-white);
   grid-column: span 4;
@@ -153,4 +182,41 @@
 
 .onboard {
   margin-bottom: 112px;
+}
+
+.onboard .title {
+  margin-top: 335px;
+  margin-bottom: 70px;
+}
+
+.onboard .container .button {
+  margin-bottom: 112px;
+}
+
+.backgroundImage {
+  background-image: url("../images/ImageBackground.png");
+  opacity: 0.9;
+  background-position: right top;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.onboard .button {
+  color: var(--color-white);
+  border-radius: 180px;
+  border: solid 1px var(--color-white);
+  padding: 28px 64px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.onboard .button:hover {
+  background-color: var(--color-white);
+  color: var(--color-coral);
 }

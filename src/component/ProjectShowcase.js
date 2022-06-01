@@ -32,7 +32,11 @@ function Project(props) {
     <div className="project">
       <div className="columns">
         <div className="project-details">
-          <div className="project-title">{props.title}</div>
+          <div className="project-title">
+            <div className="line"></div>
+
+            <p>{props.title}</p>
+          </div>
           <div className="project-subtitle">{props.subtitle}</div>
           <div className="project-description">{props.description}</div>
         </div>

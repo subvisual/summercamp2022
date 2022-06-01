@@ -12,6 +12,7 @@
   --color-blue-dark: #2421ab;
   --color-blue-light: #e8f4ff;
   --color-purple: #9563ff;
+  --color-coral: #ff7b9b;
   --grid-gap: 28px;
   --max-width-desktop: 1152px;
   --font-primary: Roboto, sans-serif;
@@ -61,7 +62,6 @@ body {
 .has-background-blue {
   background-color: var(--color-blue);
 }
-
 .has-background-blue-dark {
   background-color: var(--color-blue-dark);
 }
@@ -110,4 +110,10 @@ body {
 .button:hover {
   background-color: var(--color-blue);
   color: var(--color-white);
+}
+
+.Position-background {
+  /* background-color: var(--color-blue); */
+  position: relative;
+  overflow: hidden;
 }

@@ -5,7 +5,9 @@ import Testimonials from "../component/Testimonials";
 import FAQs from "../component/FAQs";
 import ProjectShowcase from "../component/ProjectShowcase";
 import Nav from "../component/Nav";
-
+import FirstPhotoChallenge from "../images/FirstPhotoChallenge.jpg";
+import SecondPhotoChallenge from "../images/SecondPhotoChallenge.jpg";
+import ImageBackground from "../images/ImageBackground.png";
 function JoinUs() {
   return (
     <div className="join-us">
@@ -79,13 +81,20 @@ function AreYouUp() {
           <div className="columns">
             <div className="header">
               <h2 className="title">Are you up to this challenge?</h2>
+              <div className="content">
+                <p>
+                  Here you will meet other Campers that share your passion for
+                  technology, and who will work alongside you to create a cool
+                  new product from scratch.
+                </p>
+              </div>
             </div>
-            <div className="content">
-              <p>
-                Here you will meet other Campers that share your passion for
-                technology, and who will work alongside you to create a cool new
-                product from scratch.
-              </p>
+            <div className="firstphoto">
+              <img src={FirstPhotoChallenge} alt="" />
+            </div>
+
+            <div className="secondphoto">
+              <img src={SecondPhotoChallenge} alt="" />
             </div>
           </div>
         </div>
@@ -94,14 +103,18 @@ function AreYouUp() {
             <div className="left">
               <h2 className="title">If you like</h2>
             </div>
-            <div className="right">
+
+            <div className="right" style={{ color: "var(--color-blue)" }}>
               <div className="item">
+                <div class="line"></div>
                 <p>product design</p>
               </div>
               <div className="item">
+                <div class="line"></div>
                 <p>product management</p>
               </div>
               <div className="item">
+                <div class="line"></div>
                 <p>programming</p>
               </div>
             </div>
@@ -109,7 +122,7 @@ function AreYouUp() {
         </div>
         <div className="your-opportunity">
           <div className="header">
-            <h2 className="title">this is your opportunity to</h2>
+            <h2 className="title">This is your opportunity to</h2>
           </div>
           <div className="columns">
             <div className="item has-background-blue">
@@ -254,7 +267,7 @@ function Onboard() {
     <div className="onboard">
       <div className="box">
         <div className="container">
-          <div className="title">
+          <div className="title" style={{ color: "var(--color-white)" }}>
             We'd love to have <br /> you on board!
           </div>
           <a href="/" className="button">
@@ -287,7 +300,10 @@ function Home() {
       <HowItWorks />
       <SomeQuestions />
       <TalkToUs />
-      <Onboard />
+      <div className="fold has-background-blue Position-background">
+        <div className="backgroundImage"></div>
+        <Onboard />
+      </div>
       <Footer />
     </Fragment>
   );
