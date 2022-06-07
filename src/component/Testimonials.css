@@ -26,3 +26,13 @@
 .testimonials .buttons > *:first-child {
   margin-right: 40px;
 }
+
+@media (max-width: 800px) {
+  .testimonials .content {
+    padding: 0 28px;
+  }
+
+  .testimonials .columns {
+    display: flex;
+  }
+}

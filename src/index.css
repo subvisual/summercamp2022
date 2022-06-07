@@ -15,6 +15,7 @@
   --color-coral: #ff7b9b;
   --grid-gap: 28px;
   --max-width-desktop: 1152px;
+  --max-width-tablet: 800px;
   --font-primary: Roboto, sans-serif;
   --font-secondary: Acta, serif;
 }
@@ -118,4 +119,14 @@ body {
   /* background-color: var(--color-blue); */
   position: relative;
   overflow: hidden;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
 }

@@ -59,17 +59,15 @@ const QUESTIONS = [
         create strong working relationships. As the project progresses, each
         participant is expected to develop their part of the work with the full
         support of the mentors, and in constant coordination with the rest of
-        the team. The participants’ day-to-day usually involves{" "}
+        the team. The participants' day-to-day usually involves
         <span className="has-text-bold">
-          {" "}
           meetings with the team and with their mentors, constant learning,
-        </span>{" "}
-        and{" "}
+        </span>
+        and
         <span className="has-text-bold">
-          {" "}
           networking with other members of Subvisual as well as the Subvisual
           Universe,
-        </span>{" "}
+        </span>
         etc. Ultimately, everyone will have the autonomy to decide how to
         allocate their time!
       </div>
@@ -79,16 +77,18 @@ const QUESTIONS = [
 ];
 
 function Question(props) {
+  const titleClass = `title has-font-family-secondary has-font-size-medium ${
+    props.question.open ? "has-text-blue" : ""
+  }`;
+
   return (
     <div className="question">
-      <div className="columns">
+      <div className="columns header" onClick={props.onToggle}>
         <div className="left">
-          <h3 className="title has-font-family-secondary has-font-size-medium ">
-            {props.question.title}
-          </h3>
+          <h3 className={titleClass}>{props.question.title}</h3>
         </div>
         <div className="right">
-          <div className="toggle" onClick={props.onToggle}>
+          <div className="toggle">
             <svg
               width="18"
               height="11"
