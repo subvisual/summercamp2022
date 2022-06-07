@@ -187,7 +187,9 @@
 .talk-to-us {
   margin-bottom: 224px;
 }
-
+.talk-to-us .title {
+  margin-bottom: 42px;
+}
 .onboard {
   margin-bottom: 112px;
 }
@@ -239,15 +241,20 @@
 }
 
 .footer .go-to {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+.footer .go-to-content .item1 {
+  margin-bottom: 20px;
 }
 
 .contact-us {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
-
+.contact-us .content {
+  margin-bottom: 84px;
+}
 .go-to-content {
-  padding-bottom: 56px;
+  margin-bottom: 56px;
 }
 
 .we-social-content {

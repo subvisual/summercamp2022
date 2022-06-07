@@ -58,7 +58,9 @@ body {
 .has-text-blue {
   color: var(--color-blue);
 }
-
+.has-text-bold {
+  font-weight: bold;
+}
 .has-background-blue {
   background-color: var(--color-blue);
 }

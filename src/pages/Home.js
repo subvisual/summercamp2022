@@ -203,9 +203,9 @@ function HowItWorks() {
         <div className="background has-background-blue-dark">
           <div className="columns">
             <div className="top">
-              <h2 className="title">How it works</h2>
+              <h2 className="title has-font-size-large ">How it works</h2>
             </div>
-            <div className="content">
+            <div className="content has-font-size-medium">
               <div className="row">
                 <div className="box">
                   <p>
@@ -250,7 +250,9 @@ function SomeQuestions() {
       <div className="container">
         <div className="columns">
           <div className="top">
-            <h2 className="title">Some questions we are usually asked</h2>
+            <h2 className="title has-font-size-large">
+              Some questions we are usually asked
+            </h2>
           </div>
           <div className="bottom">
             <FAQs />
@@ -265,7 +267,7 @@ function TalkToUs() {
   return (
     <div className="talk-to-us">
       <div className="container">
-        <div className="title">Still got questions?</div>
+        <div className="title has-font-size-large">Still got questions?</div>
         <a href="/" className="button">
           Talk to us
         </a>
@@ -279,10 +281,13 @@ function Onboard() {
     <div className="onboard">
       <div className="box">
         <div className="container">
-          <div className="title" style={{ color: "var(--color-white)" }}>
+          <div
+            className="title has-font-size-large"
+            style={{ color: "var(--color-white)" }}
+          >
             We'd love to have <br /> you on board!
           </div>
-          <a href="/" className="button">
+          <a href="/" className="button has-font-size-medium">
             Join us
           </a>
         </div>
@@ -299,8 +304,8 @@ function Footer() {
           <div className="left">
             <div className="go-to has-text-blue"> Go to</div>
             <div className="go-to-content">
-              <div className="item">Subvisual</div>
-              <div className="item">Blog</div>
+              <div className="item1">Subvisual</div>
+              <div className="item2">Blog</div>
             </div>
 
             <div className="contact-us has-text-blue">Contact us</div>
