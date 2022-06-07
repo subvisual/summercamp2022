@@ -8,41 +8,47 @@ import Nav from "../component/Nav";
 import FirstPhotoChallenge from "../images/FirstPhotoChallenge.jpg";
 import SecondPhotoChallenge from "../images/SecondPhotoChallenge.jpg";
 import ImageBackground from "../images/ImageBackground.png";
+import ImageFooter from "../images/ImageFooter.jpg";
+import Campers1 from "../images/Campers1.jpg";
 function JoinUs() {
   return (
     <div className="join-us">
       <div className="container">
         <div className="columns">
           <div className="left">
-            <h2 className="title">Join us</h2>
+            <h2 className="title has-font-size-xlarge">Join us</h2>
           </div>
 
           <div className="right">
             <div className="item">
-              <h2 className="title">
-                <span>on a</span>
-                <span className="has-text-blue"> hands-on </span>
+              <h2 className="title has-font-size-xlarge ">
+                <span>on a </span>
+                <span className="has-text-blue has-font-family-secondary">
+                  hands-on
+                </span>
                 <br />
                 <span>approach</span>
               </h2>
-              <div className="text">
+              <div className="text has-font-size-small">
                 <p>
                   We created SummerCamp back in 2016 as a way to foster talent,
                   get new work perspectives and contribute to boosting new
                   career opportunities. We believe in continuous learning and
                   improvement, so SummerCamp is yet another way of us acting on
-                  those values
+                  those values.
                 </p>
               </div>
             </div>
             <div className="item">
-              <h2 className="title">
+              <h2 className="title has-font-size-xlarge  ">
                 <span>to get a </span>
-                <span className="has-text-blue"> real work </span>
+                <span className="has-text-blue has-font-family-secondary">
+                  real work
+                </span>
                 <br />
                 <span>experience</span>
               </h2>
-              <div className="text">
+              <div className="text has-font-size-small">
                 <p>
                   Whether you want to follow a career in technology or product,
                   during your time at SummerCamp you'll get access to a real use
@@ -52,17 +58,19 @@ function JoinUs() {
               </div>
             </div>
             <div className="item">
-              <h2 className="title">
+              <h2 className="title has-font-size-xlarge ">
                 <span> with the support of</span>
                 <br />
-                <span>a</span>
-                <span className="has-text-blue"> great team</span>
+                <span>a </span>
+                <span className="has-text-blue has-font-family-secondary">
+                  great team
+                </span>
               </h2>
-              <div className="text">
+              <div className="text has-font-size-small">
                 <p>
                   Our team members will be your mentors during the entire
                   program, wich means that you will always have someone to back
-                  your decisions and help you choose wich path to follow
+                  your decisions and help you choose wich path to follow.
                 </p>
               </div>
             </div>
@@ -80,8 +88,10 @@ function AreYouUp() {
         <div className="challenge">
           <div className="columns">
             <div className="header">
-              <h2 className="title">Are you up to this challenge?</h2>
-              <div className="content">
+              <h2 className="title has-font-size-xlarge">
+                Are you up to this challenge?
+              </h2>
+              <div className="content has-font-size-small">
                 <p>
                   Here you will meet other Campers that share your passion for
                   technology, and who will work alongside you to create a cool
@@ -101,10 +111,10 @@ function AreYouUp() {
         <div className="if-you-like">
           <div className="columns">
             <div className="left">
-              <h2 className="title">If you like</h2>
+              <h2 className="title has-font-size-large">If you like</h2>
             </div>
 
-            <div className="right" style={{ color: "var(--color-blue)" }}>
+            <div className="right has-text-blue has-font-family-secondary has-font-size-large">
               <div className="item">
                 <div class="line"></div>
                 <p>product design</p>
@@ -122,18 +132,20 @@ function AreYouUp() {
         </div>
         <div className="your-opportunity">
           <div className="header">
-            <h2 className="title">This is your opportunity to</h2>
+            <h2 className="title has-font-size-large">
+              This is your opportunity to
+            </h2>
           </div>
           <div className="columns">
-            <div className="item has-background-blue">
-              <div className="title">01</div>
+            <div className="item has-background-blue has-font-size-medium ">
+              <div className="title ">01</div>
               <p>Get professional experience</p>
             </div>
-            <div className="item has-background-blue-dark">
+            <div className="item has-background-blue-dark has-font-size-medium">
               <div className="title">02</div>
               <p>Meet other talented people</p>
             </div>
-            <div className="item has-background-purple">
+            <div className="item has-background-purple has-font-size-medium">
               <div className="title">03</div>
               <p>Learn with experienced mentors</p>
             </div>
@@ -149,7 +161,7 @@ function DontJustTake() {
     <div className="dont-just-take">
       <div className="container">
         <div className="columns">
-          <div className="top">
+          <div className="top has-font-size-large">
             <h2>
               But don't just take our
               <br />
@@ -170,7 +182,7 @@ function Showcase() {
     <div className="showcase">
       <div className="container">
         <div className="columns">
-          <div className="header">
+          <div className="header has-font-size-large">
             <h2 className="title">
               Here's what our campers have done in the past years
             </h2>
@@ -282,7 +294,46 @@ function Onboard() {
 function Footer() {
   return (
     <footer className="footer">
-      <div className="container"></div>
+      <div className="container">
+        <div className="columns">
+          <div className="left">
+            <div className="go-to has-text-blue"> Go to</div>
+            <div className="go-to-content">
+              <div className="item">Subvisual</div>
+              <div className="item">Blog</div>
+            </div>
+
+            <div className="contact-us has-text-blue">Contact us</div>
+            <div className="contact-us content">contact@subvisual.co</div>
+            <div className="image">
+              <img src={ImageFooter} alt="" />
+            </div>
+          </div>
+
+          <div className="right">
+            <div className="we-social has-text-blue">We're social</div>
+            <div className=" we-social-content">
+              <div className="item">Md</div>
+              <div className="item">Be</div>
+              <div className="item">Git</div>
+              <div className="item">Dri</div>
+              <div className="item">In</div>
+              <div className="item">Fb</div>
+              <div className="item">Tw</div>
+              <div className="item">Ins</div>
+            </div>
+            <div className="offices has-text-blue">Offices</div>
+            <div className="offices-content">
+              Remote.Work anywhere in Europe.
+              <br />
+              Or join our mothership,landed in Braga, Portugal.
+            </div>
+            <div className="image">
+              <img src={ImageFooter} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 }

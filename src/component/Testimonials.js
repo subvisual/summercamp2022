@@ -4,20 +4,20 @@ import "./Testimonials.css";
 
 const TESTIMONIALS = [
   {
-    text: "The SummerCamp was the perfect opportunity to validate my wish to pursue a career in Product Management as it provided me with a real life work experience. Additionally, being surrounded by other talented people from all background who shared a common vision, made this an unforgetable summer.",
+    text: "The Summer Camp was definitely a steppingstone in my decision to pursue a career in Product Management. Additionally, being surrounded by other talented people from all backgrounds who shared a common vision, made this an unforgettable summer.",
     author: "Álvaro Bezerra",
     info: "Summer Camp 2020",
   },
   {
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis repudiandae id nisi inventore ipsum omnis impedit blanditiis voluptatum eveniet fuga corrupti, ducimus velit veritatis quasi ipsa soluta ad ratione sed!",
-    author: "Álvaro Bezerra",
-    info: "Summer Camp 2020",
+    text: "Subvisual’s Summer Camp absolutely exceeded my expectations and helped me grow both as a person and as a designer. I am completely delighted that I took the chance to apply; and joining the team as a full-time designer afterwards was definitely the cherry on top of a great experience. ",
+    author: "Filipa Ribeiro",
+    info: "Summer Camp 2021",
   },
-  {
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis repudiandae id nisi inventore ipsum omnis impedit blanditiis voluptatum eveniet fuga corrupti, ducimus velit veritatis quasi ipsa soluta ad ratione sed!",
-    author: "John Doe",
-    info: "Summer Camp 2020",
-  },
+  // {
+  //   text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis repudiandae id nisi inventore ipsum omnis impedit blanditiis voluptatum eveniet fuga corrupti, ducimus velit veritatis quasi ipsa soluta ad ratione sed!",
+  //   author: "John Doe",
+  //   info: "Summer Camp 2020",
+  // },
 ];
 
 function ArrowButton(props) {

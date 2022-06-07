@@ -1,3 +1,12 @@
+@media (max-width: 600px) {
+  .your-opportunity .columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .your-opportunity .item {
+    margin-bottom: 20px;
+  }
+}
+
 .fold {
   border-radius: 60px;
   max-width: 1324px;
@@ -11,7 +20,6 @@
 
 .join-us .left {
   grid-column: span 4;
-  font-size: 84px;
 }
 
 .join-us .right {
@@ -28,7 +36,6 @@
 }
 
 .join-us .item .title {
-  font-size: 84px;
   margin-bottom: 42px;
 }
 
@@ -156,17 +163,18 @@
 }
 
 .are-you-up .your-opportunity .item {
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   border-radius: 28px;
   color: var(--color-white);
   grid-column: span 4;
   padding: 42px;
+  margin-bottom: 224px;
 }
 
-.are-you-up .your-opportunity .item .title {
+/* .are-you-up .your-opportunity .item .title {
   margin-bottom: 42px;
-}
+} */
 
 .showcase {
   margin: 224px 0;
@@ -219,4 +227,40 @@
 .onboard .button:hover {
   background-color: var(--color-white);
   color: var(--color-coral);
+}
+
+.footer .left {
+  grid-column: span 6;
+}
+
+.footer .right {
+  grid-column-start: 7;
+  grid-column-end: 13;
+}
+
+.footer .go-to {
+  padding-bottom: 20px;
+}
+
+.contact-us {
+  padding-bottom: 20px;
+}
+
+.go-to-content {
+  padding-bottom: 56px;
+}
+
+.we-social-content {
+  display: flex;
+  flex-direction: row;
+  column-gap: 28px;
+  padding-bottom: 104px;
+}
+
+.offices {
+  padding-bottom: 20px;
+}
+
+.offices-content {
+  padding-bottom: 56px;
 }
