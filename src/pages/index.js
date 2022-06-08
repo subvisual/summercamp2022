@@ -1,184 +1,388 @@
-import * as React from "react"
+import "../index.css";
+import "./Home.css";
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
-
-// markup
-const IndexPage = () => {
+import React, { Fragment } from "react";
+import Testimonials from "../component/Testimonials";
+import FAQs from "../component/FAQs";
+import ProjectShowcase from "../component/ProjectShowcase";
+import Nav from "../component/Nav";
+import FirstPhotoChallenge from "../images/FirstPhotoChallenge.jpg";
+import SecondPhotoChallenge from "../images/SecondPhotoChallenge.jpg";
+import ImageBackground from "../images/ImageBackground.png";
+import ImageFooter from "../images/ImageFooter.jpg";
+import Campers1 from "../images/Campers1.jpg";
+function JoinUs() {
   return (
-    <main style={pageStyles}>
-      <title>Home Page</title>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
-        <span role="img" aria-label="Party popper emojis">
-          🎉🎉🎉
-        </span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
+    <div className="join-us">
+      <div className="container">
+        <div className="columns">
+          <div className="left">
+            <h2 className="title has-font-size-xlarge">Join us</h2>
+          </div>
+
+          <div className="right">
+            <div className="item">
+              <h2 className="title has-font-size-xlarge ">
+                <span>on a </span>
+                <span className="has-text-blue has-font-family-secondary">
+                  hands-on
                 </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
-            </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
-    </main>
-  )
+                <br />
+                <span>approach</span>
+              </h2>
+              <div className="text has-font-size-small">
+                <p>
+                  We created SummerCamp back in 2016 as a way to foster talent,
+                  get new work perspectives and contribute to boosting new
+                  career opportunities. We believe in continuous learning and
+                  improvement, so SummerCamp is yet another way of us acting on
+                  those values.
+                </p>
+              </div>
+            </div>
+            <div className="item">
+              <h2 className="title has-font-size-xlarge">
+                <span>to get a </span>
+                <span className="has-text-blue has-font-family-secondary">
+                  real work
+                </span>
+                <br />
+                <span>experience</span>
+              </h2>
+              <div className="text has-font-size-small">
+                <p>
+                  Whether you want to follow a career in technology or product,
+                  during your time at SummerCamp you'll get access to a real use
+                  case that will help you understand how a job in that area
+                  could be like.
+                </p>
+              </div>
+            </div>
+            <div className="item">
+              <h2 className="title has-font-size-xlarge ">
+                <span> with the support of</span>
+                <br />
+                <span>a </span>
+                <span className="has-text-blue has-font-family-secondary">
+                  great team
+                </span>
+              </h2>
+              <div className="text has-font-size-small">
+                <p>
+                  Our team members will be your mentors during the entire
+                  program, wich means that you will always have someone to back
+                  your decisions and help you choose wich path to follow.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-export default IndexPage
+function AreYouUp() {
+  return (
+    <div className="are-you-up">
+      <div className="container">
+        <div className="challenge">
+          <div className="columns">
+            <div className="header">
+              <h2 className="title has-font-size-xlarge">
+                Are you up to this challenge?
+              </h2>
+              <div className="content has-font-size-small">
+                <p>
+                  Here you will meet other Campers that share your passion for
+                  technology, and who will work alongside you to create a cool
+                  new product from scratch.
+                </p>
+              </div>
+            </div>
+            <div className="firstphoto">
+              <img src={FirstPhotoChallenge} aria-hidden="true" alt="" />
+            </div>
+
+            <div className="secondphoto">
+              <img src={SecondPhotoChallenge} aria-hidden="true" alt="" />
+            </div>
+          </div>
+        </div>
+        <div className="if-you-like">
+          <div className="columns">
+            <div className="left">
+              <h2 className="title has-font-size-large">If you like</h2>
+            </div>
+
+            <div className="right has-text-blue has-font-family-secondary has-font-size-large">
+              <div className="item">
+                <div class="line"></div>
+                <p>product design</p>
+              </div>
+              <div className="item">
+                <div class="line"></div>
+                <p>product management</p>
+              </div>
+              <div className="item">
+                <div class="line"></div>
+                <p>programming</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="your-opportunity">
+          <div className="header">
+            <h2 className="title has-font-size-large">
+              This is your opportunity to
+            </h2>
+          </div>
+          <div className="columns">
+            <div className="item has-background-blue has-font-size-medium ">
+              <div className="title ">01</div>
+              <p>Get professional experience</p>
+            </div>
+            <div className="item has-background-blue-dark has-font-size-medium">
+              <div className="title">02</div>
+              <p>Meet other talented people</p>
+            </div>
+            <div className="item has-background-purple has-font-size-medium">
+              <div className="title">03</div>
+              <p>Learn with experienced mentors</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DontJustTake() {
+  return (
+    <div className="dont-just-take">
+      <div className="container">
+        <div className="columns">
+          <div className="top has-font-size-large">
+            <h2>
+              But don't just take our
+              <br />
+              word for it
+            </h2>
+          </div>
+          <div className="bottom">
+            <Testimonials />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Showcase() {
+  return (
+    <div className="showcase">
+      <div className="container">
+        <div className="columns">
+          <div className="header has-font-size-large">
+            <h2 className="title">
+              Here's what our campers have done in the past years
+            </h2>
+          </div>
+        </div>
+        <div className="projects">
+          <ProjectShowcase />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function HowItWorks() {
+  return (
+    <div className="how-it-works">
+      <div className="container">
+        <div className="background has-background-blue-dark">
+          <div className="columns">
+            <div className="top">
+              <h2 className="title has-font-size-large ">How it works</h2>
+            </div>
+            <div className="content has-font-size-medium">
+              <div className="row">
+                <div className="box">
+                  <p>
+                    01 <br />
+                    <br /> You submit your application.
+                  </p>
+                </div>
+                <div className="box">
+                  <p>
+                    02 <br />
+                    <br /> We check your profile.
+                  </p>
+                </div>
+              </div>
+
+              <div className="row">
+                <div className="box">
+                  <p>
+                    03 <br />
+                    <br /> We schedule
+                    <br /> a call to meet you*.
+                  </p>
+                </div>
+                <div className="box">
+                  <p>
+                    04 <br />
+                    <br /> You join the program!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function SomeQuestions() {
+  return (
+    <div className="some-questions">
+      <div className="container">
+        <div className="columns">
+          <div className="top">
+            <h2 className="title has-font-size-large">
+              Some questions we are usually asked
+            </h2>
+          </div>
+          <div className="bottom">
+            <FAQs />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function TalkToUs() {
+  return (
+    <div className="talk-to-us">
+      <div className="container">
+        <div className="title has-font-size-large">Still got questions?</div>
+        <a href="/" className="button">
+          Talk to us
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function Onboard() {
+  return (
+    <div className="onboard">
+      <div className="box">
+        <div className="container">
+          <div
+            className="title has-font-size-large"
+            style={{ color: "var(--color-white)" }}
+          >
+            We'd love to have <br /> you on board!
+          </div>
+          <a href="/" className="button has-font-size-medium">
+            Join us
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="footer has-font-size-small">
+      <div className="container">
+        <div className="columns">
+          <div className="left">
+            <div className="go-to has-text-blue has-font-size-medium">
+              Go to
+            </div>
+            <div className="go-to-content">
+              <div className="item1">Subvisual</div>
+              <div className="item2">Blog</div>
+            </div>
+          </div>
+
+          <div className="right">
+            <div className="we-social has-text-blue has-font-size-medium">
+              We're social
+            </div>
+            <div className="we-social-content">
+              <div className="item">Md</div>
+              <div className="item">Be</div>
+              <div className="item">Git</div>
+              <div className="item">Dri</div>
+              <div className="item">In</div>
+              <div className="item">Fb</div>
+              <div className="item">Tw</div>
+              <div className="item">Ins</div>
+            </div>
+          </div>
+
+          <div className="left">
+            <div className="contact-us has-text-blue has-font-size-medium">
+              Contact us
+            </div>
+            <div className="contact-us content">contact@subvisual.co</div>
+          </div>
+
+          <div className="right">
+            <div className="offices has-text-blue has-font-size-medium">
+              Offices
+            </div>
+            <div className="offices-content">
+              Remote.Work anywhere in Europe.
+              <br />
+              Or join our mothership,landed in Braga, Portugal.
+            </div>
+            {/* <div className="image">
+              <img src={ImageFooter} alt="" />
+            </div> */}
+          </div>
+        </div>
+
+        <div className="left">
+          <div className="image">
+            <img
+              src={ImageFooter}
+              alt="Os logotipos Norte 2020, Portugal 2020 e União Europeia"
+            />
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function Home() {
+  return (
+    <Fragment>
+      <div className="fold has-background-blue-light">
+        <Nav />
+        <JoinUs />
+      </div>
+      <AreYouUp />
+      <DontJustTake />
+      <Showcase />
+      <HowItWorks />
+      <SomeQuestions />
+      <TalkToUs />
+      <div className="fold has-background-blue Position-background">
+        <div className="backgroundImage"></div>
+        <Onboard />
+      </div>
+      <Footer />
+    </Fragment>
+  );
+}
+
+export default Home;
