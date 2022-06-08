@@ -158,7 +158,7 @@ function AreYouUp() {
 
 function DontJustTake() {
   return (
-    <div className="dont-just-take">
+    <div id="testimonials" className="dont-just-take">
       <div className="container">
         <div className="columns">
           <div className="top has-font-size-large">
@@ -179,7 +179,7 @@ function DontJustTake() {
 
 function Showcase() {
   return (
-    <div className="showcase">
+    <div id="projects" className="showcase">
       <div className="container">
         <div className="columns">
           <div className="header has-font-size-large">
@@ -246,7 +246,7 @@ function HowItWorks() {
 
 function SomeQuestions() {
   return (
-    <div className="some-questions">
+    <div id="faqs" className="some-questions">
       <div className="container">
         <div className="columns">
           <div className="top">

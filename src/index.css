@@ -1,6 +1,6 @@
 /* Fonts */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:opsz@8..144&display=swap");
 
 /* Variables */
 
@@ -17,7 +17,7 @@
   --max-width-desktop: 1152px;
   --max-width-tablet: 800px;
   --font-primary: Roboto, sans-serif;
-  --font-secondary: Acta, serif;
+  --font-secondary: "Roboto Serif", serif;
 }
 
 /* Reset */
@@ -56,7 +56,9 @@ body {
   display: none;
 }
 
-/* .has-text-white */
+.has-text-white {
+  color: var(--color-white) !important;
+}
 .has-text-blue {
   color: var(--color-blue);
 }
@@ -108,6 +110,8 @@ body {
   border: solid 1px var(--color-blue);
   padding: 28px 64px;
   display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -122,12 +126,16 @@ body {
   overflow: hidden;
 }
 
+.image {
+  max-width: 100%;
+}
+
 @media (max-width: 800px) {
   body {
-    padding: 0 10px;
+    padding: 16px;
   }
 
   .container {
-    padding: 0 20px;
+    padding: 0 56px;
   }
 }

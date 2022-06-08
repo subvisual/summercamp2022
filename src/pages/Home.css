@@ -2,7 +2,7 @@
   border-radius: 60px;
   max-width: 1324px;
   margin: 0 auto 224px;
-  padding-top: 45px;
+  padding-top: 62px;
 }
 
 .join-us {
@@ -323,5 +323,9 @@
 
   .are-you-up .your-opportunity .item {
     margin-bottom: 16px;
+  }
+
+  .fold {
+    padding-top: 42px;
   }
 }
