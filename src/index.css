@@ -1,13 +1,141 @@
+/* Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Serif:opsz@8..144&display=swap");
+
+/* Variables */
+
+:root {
+  --color-black: #1a1a1a;
+  --color-grey: #403f4c;
+  --color-white: #fff;
+  --color-blue: #045cfc;
+  --color-blue-dark: #2421ab;
+  --color-blue-light: #e8f4ff;
+  --color-purple: #9563ff;
+  --color-coral: #ff7b9b;
+  --grid-gap: 28px;
+  --max-width-desktop: 1152px;
+  --max-width-tablet: 800px;
+  --font-primary: Roboto, sans-serif;
+  --font-secondary: "Roboto Serif", serif;
+}
+
+/* Reset */
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-weight: normal;
+  box-sizing: border-box;
+}
+
+/* Global */
+
+body {
+  font-family: var(--font-primary);
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var(--max-width-desktop);
+}
+
+.columns {
+  display: grid;
+  grid-column-gap: var(--grid-gap);
+  grid-template-columns: repeat(12, [col] 1fr);
+}
+
+.is-hidden {
+  display: none;
+}
+
+.has-text-white {
+  color: var(--color-white) !important;
+}
+.has-text-blue {
+  color: var(--color-blue);
+}
+.has-text-bold {
+  font-weight: bold;
+}
+.has-background-blue {
+  background-color: var(--color-blue);
+}
+.has-background-blue-dark {
+  background-color: var(--color-blue-dark);
+}
+
+.has-background-blue-light {
+  background-color: var(--color-blue-light);
+}
+
+.has-background-purple {
+  background-color: var(--color-purple);
+}
+
+.has-font-family-secondary {
+  font-family: var(--font-secondary);
+}
+
+.has-font-size-xlarge {
+  font-size: 84px;
+  line-height: 92px;
+}
+
+.has-font-size-large {
+  font-size: 56px;
+  line-height: 64px;
+}
+
+.has-font-size-medium {
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.has-font-size-small {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.button {
+  color: var(--color-blue);
+  border-radius: 180px;
+  border: solid 1px var(--color-blue);
+  padding: 28px 64px;
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+
+.Position-background {
+  /* background-color: var(--color-blue); */
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  max-width: 100%;
+}
+
+@media (max-width: 800px) {
+  body {
+    padding: 16px;
+  }
+
+  .container {
+    padding: 0 56px;
+  }
 }

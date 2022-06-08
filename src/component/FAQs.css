@@ -1,0 +1,28 @@
+.question {
+  border-bottom: solid 1px var(--color-black);
+}
+
+.question .left {
+  grid-column: span 8;
+}
+
+.question .right {
+  grid-column: 12 / 12;
+  display: flex;
+  align-items: center;
+}
+
+.question .content {
+  grid-column: span 12;
+  margin-bottom: 20px;
+  height: auto;
+}
+
+.question .header {
+  cursor: pointer;
+  padding: 20px 0;
+}
+
+.question .columns {
+  padding: 42px 0;
+}

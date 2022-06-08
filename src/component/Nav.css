@@ -1,0 +1,58 @@
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav .toggle {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .nav .menu {
+    display: none;
+  }
+
+  .nav .toggle {
+    display: block;
+  }
+
+  .nav .mobile-menu {
+    touch-action: none;
+    padding: 72px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .nav .close {
+    cursor: pointer;
+    position: absolute;
+    top: 72px;
+    right: 72px;
+    font-size: 56px;
+    line-height: 0.5;
+  }
+
+  .nav .toggle {
+    cursor: pointer;
+  }
+
+  .nav .mobile-menu .brand {
+    margin-bottom: 116px;
+  }
+
+  .nav .menu-item {
+    margin-bottom: 64px;
+  }
+
+  .nav .menu-item a {
+    text-decoration: none;
+  }
+
+  .nav .button {
+    border-color: var(--color-white);
+    width: 100%;
+  }
+}

@@ -1,34 +1,331 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
+.fold {
+  border-radius: 60px;
+  max-width: 1324px;
+  margin: 0 auto 224px;
+  padding-top: 62px;
 }
 
-.grid-item1,
-.grid-item2,
-.grid-item3 {
-  grid-column-start: 1;
-  grid-column-end: 7;
-  border: 5px solid red;
+.join-us {
+  margin-top: 210px;
 }
 
-.container-flex {
+.join-us .left {
+  grid-column: span 4;
+}
+
+.join-us .right {
+  grid-column-start: 5;
+  grid-column-end: 13;
+}
+
+.join-us .item {
+  margin-bottom: 112px;
+}
+
+.join-us .item:last-child {
+  margin-bottom: 224px;
+}
+
+.join-us .item .title {
+  margin-bottom: 42px;
+}
+
+.join-us .item .text {
+  max-width: 460px;
+}
+
+.dont-just-take .top {
+  grid-column: span 12;
+  margin-bottom: 84px;
+}
+
+.dont-just-take .bottom {
+  grid-column: span 12;
+}
+
+.how-it-works {
+  color: var(--color-white);
+  margin-bottom: 224px;
+}
+
+.how-it-works .background {
+  border-radius: 28px;
+  padding: 112px 0;
+}
+
+.how-it-works .top {
+  grid-column: 3 / span 8;
+  margin-bottom: 56px;
+}
+
+.how-it-works .content {
+  grid-column: 3 / span 8;
+}
+
+.how-it-works .row {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  align-items: stretch;
+  gap: var(--grid-gap);
+}
+
+.how-it-works .row:first-child {
+  margin-bottom: 28px;
+}
+
+.how-it-works .box {
+  border-radius: 28px;
+  border: 1px solid var(--color-white);
+  padding: 28px;
+  transition: transform ease-in-out 0.25s;
+  flex: 1;
+}
+
+.how-it-works .box:hover {
+  background-color: var(--color-white);
+  color: var(--color-blue);
+  transform: translateY(-12px);
+}
+
+.some-questions {
+  margin-bottom: 224px;
+}
+
+.some-questions .top {
+  grid-column-start: 1;
+  grid-column-end: 8;
+  padding-bottom: 112px;
+}
+
+.some-questions .bottom {
+  grid-column: span 12;
+}
+
+.are-you-up .challenge .header {
+  grid-column: span 7;
+  margin-bottom: 42px;
+}
+
+.are-you-up .challenge .firstphoto {
+  grid-column: 8 / span 5;
+}
+.are-you-up .challenge .firstphoto img {
+  max-width: 100%;
+}
+.are-you-up .challenge .content {
+  grid-column: span 6;
+  margin-bottom: 98.96px;
+}
+.are-you-up .challenge .secondphoto {
+  grid-column: span 8;
+}
+.are-you-up .challenge .firstphoto img {
+  max-width: 100%;
+  margin-bottom: 71.99px;
+}
+.are-you-up .challenge .title {
+  padding-bottom: 42px;
+}
+
+.are-you-up .if-you-like {
+  margin: 220px 0;
+}
+
+.are-you-up .if-you-like .left {
+  grid-column: span 3;
+  grid-row: 2 / 3;
+}
+.line {
+  width: 69px;
+  border-top: 1px solid #9563ff;
+}
+.are-you-up .if-you-like .line {
+  margin-right: 30px;
+}
+.are-you-up .if-you-like .right {
+  grid-column: 6 / 13;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.are-you-up .if-you-like .item {
+  display: flex;
   align-items: center;
 }
-.item-flex {
-  border: 2.5px solid blue;
-  margin-left: 100px;
-  padding: 25px 25px;
-  font-family: serif;
-  font-size: 20px;
-}
-h2 {
-  text-align: center;
-  margin-bottom: 50px;
-  margin-top: 50px;
+.are-you-up .your-opportunity {
+  margin-bottom: 224px;
 }
 
-p {
-  font-style: italic;
+.are-you-up .your-opportunity .header {
+  margin-bottom: 84px;
+}
+
+.are-you-up .your-opportunity .item {
+  /* display: flex;
+  align-items: center; */
+  border-radius: 28px;
+  color: var(--color-white);
+  grid-column: span 4;
+  padding: 42px;
+  margin-bottom: 224px;
+}
+
+/* .are-you-up .your-opportunity .item .title {
+  margin-bottom: 42px;
+} */
+
+.showcase {
+  margin: 224px 0;
+}
+
+.showcase .header {
+  grid-column: span 6;
+}
+
+.talk-to-us {
+  margin-bottom: 224px;
+}
+.talk-to-us .title {
+  margin-bottom: 42px;
+}
+.onboard {
+  margin-bottom: 112px;
+}
+
+.onboard .title {
+  margin-top: 335px;
+  margin-bottom: 70px;
+}
+
+.onboard .container .button {
+  margin-bottom: 112px;
+}
+
+.backgroundImage {
+  background-image: url("../images/ImageBackground.png");
+  opacity: 0.9;
+  background-position: right top;
+  background-repeat: no-repeat;
+  mix-blend-mode: multiply;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.onboard .button {
+  color: var(--color-white);
+  border-radius: 180px;
+  border: solid 1px var(--color-white);
+  padding: 28px 64px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.onboard .button:hover {
+  background-color: var(--color-white);
+  color: var(--color-coral);
+}
+
+.footer .left {
+  grid-column: span 6;
+}
+
+.footer .right {
+  grid-column-start: 7;
+  grid-column-end: 13;
+}
+
+.footer .go-to,
+.footer .we-social {
+  margin-bottom: 20px;
+}
+.footer .go-to-content .item1 {
+  margin-bottom: 20px;
+}
+
+.contact-us {
+  margin-bottom: 20px;
+}
+.contact-us .content {
+  margin-bottom: 84px;
+}
+.go-to-content {
+  margin-bottom: 56px;
+}
+
+.we-social-content {
+  display: flex;
+  flex-direction: row;
+  column-gap: 28px;
+  padding-bottom: 104px;
+  flex-wrap: wrap;
+}
+
+.offices {
+  padding-bottom: 20px;
+}
+
+.offices-content {
+  padding-bottom: 56px;
+}
+
+.secondphoto img {
+  max-width: 100%;
+}
+
+@media (max-width: 800px) {
+  .showcase .header {
+    grid-column: 1 / span 12;
+  }
+
+  .how-it-works .columns {
+    display: flex;
+    flex-direction: column;
+    padding: 0 54px;
+  }
+
+  .how-it-works .row {
+    flex-direction: column;
+  }
+
+  .some-questions .top {
+    grid-column-end: 12;
+  }
+
+  .your-opportunity .columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .your-opportunity .item {
+    margin-bottom: 20px;
+  }
+
+  .join-us .columns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .join-us .title {
+    margin-bottom: 64px;
+  }
+
+  .if-you-like .columns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .if-you-like .title {
+    margin-bottom: 64px;
+  }
+
+  .are-you-up .your-opportunity .item {
+    margin-bottom: 16px;
+  }
+
+  .fold {
+    padding-top: 42px;
+  }
 }
