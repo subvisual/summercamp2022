@@ -55,6 +55,7 @@ body {
 .is-hidden {
   display: none;
 }
+
 /* .has-text-white */
 .has-text-blue {
   color: var(--color-blue);

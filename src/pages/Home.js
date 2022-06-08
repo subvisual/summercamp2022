@@ -40,7 +40,7 @@ function JoinUs() {
               </div>
             </div>
             <div className="item">
-              <h2 className="title has-font-size-xlarge  ">
+              <h2 className="title has-font-size-xlarge">
                 <span>to get a </span>
                 <span className="has-text-blue has-font-family-secondary">
                   real work
@@ -100,11 +100,11 @@ function AreYouUp() {
               </div>
             </div>
             <div className="firstphoto">
-              <img src={FirstPhotoChallenge} alt="" />
+              <img src={FirstPhotoChallenge} aria-hidden="true" alt="" />
             </div>
 
             <div className="secondphoto">
-              <img src={SecondPhotoChallenge} alt="" />
+              <img src={SecondPhotoChallenge} aria-hidden="true" alt="" />
             </div>
           </div>
         </div>
@@ -298,26 +298,24 @@ function Onboard() {
 
 function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer has-font-size-small">
       <div className="container">
         <div className="columns">
           <div className="left">
-            <div className="go-to has-text-blue"> Go to</div>
+            <div className="go-to has-text-blue has-font-size-medium">
+              Go to
+            </div>
             <div className="go-to-content">
               <div className="item1">Subvisual</div>
               <div className="item2">Blog</div>
             </div>
-
-            <div className="contact-us has-text-blue">Contact us</div>
-            <div className="contact-us content">contact@subvisual.co</div>
-            <div className="image">
-              <img src={ImageFooter} alt="" />
-            </div>
           </div>
 
           <div className="right">
-            <div className="we-social has-text-blue">We're social</div>
-            <div className=" we-social-content">
+            <div className="we-social has-text-blue has-font-size-medium">
+              We're social
+            </div>
+            <div className="we-social-content">
               <div className="item">Md</div>
               <div className="item">Be</div>
               <div className="item">Git</div>
@@ -327,15 +325,36 @@ function Footer() {
               <div className="item">Tw</div>
               <div className="item">Ins</div>
             </div>
-            <div className="offices has-text-blue">Offices</div>
+          </div>
+
+          <div className="left">
+            <div className="contact-us has-text-blue has-font-size-medium">
+              Contact us
+            </div>
+            <div className="contact-us content">contact@subvisual.co</div>
+          </div>
+
+          <div className="right">
+            <div className="offices has-text-blue has-font-size-medium">
+              Offices
+            </div>
             <div className="offices-content">
               Remote.Work anywhere in Europe.
               <br />
               Or join our mothership,landed in Braga, Portugal.
             </div>
-            <div className="image">
+            {/* <div className="image">
               <img src={ImageFooter} alt="" />
-            </div>
+            </div> */}
+          </div>
+        </div>
+
+        <div className="left">
+          <div className="image">
+            <img
+              src={ImageFooter}
+              alt="Os logotipos Norte 2020, Portugal 2020 e União Europeia"
+            />
           </div>
         </div>
       </div>

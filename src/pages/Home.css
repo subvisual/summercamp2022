@@ -238,7 +238,8 @@
   grid-column-end: 13;
 }
 
-.footer .go-to {
+.footer .go-to,
+.footer .we-social {
   margin-bottom: 20px;
 }
 .footer .go-to-content .item1 {
@@ -260,6 +261,7 @@
   flex-direction: row;
   column-gap: 28px;
   padding-bottom: 104px;
+  flex-wrap: wrap;
 }
 
 .offices {
@@ -270,7 +272,29 @@
   padding-bottom: 56px;
 }
 
+.secondphoto img {
+  max-width: 100%;
+}
+
 @media (max-width: 800px) {
+  .showcase .header {
+    grid-column: 1 / span 12;
+  }
+
+  .how-it-works .columns {
+    display: flex;
+    flex-direction: column;
+    padding: 0 54px;
+  }
+
+  .how-it-works .row {
+    flex-direction: column;
+  }
+
+  .some-questions .top {
+    grid-column-end: 12;
+  }
+
   .your-opportunity .columns {
     grid-template-columns: repeat(2, 1fr);
   }

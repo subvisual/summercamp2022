@@ -59,6 +59,10 @@
 }
 
 @media (max-width: 800px) {
+  .project-showcase .project .project-image {
+    padding: 56px 0;
+  }
+
   .project-showcase .columns {
     display: flex;
     flex-direction: column;
