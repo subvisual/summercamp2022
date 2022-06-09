@@ -2,24 +2,6 @@ import React, { useState } from "react";
 
 import "./Testimonials.css";
 
-const TESTIMONIALS = [
-  {
-    text: "The Summer Camp was definitely a steppingstone in my decision to pursue a career in Product Management. Additionally, being surrounded by other talented people from all backgrounds who shared a common vision, made this an unforgettable summer.",
-    author: "Álvaro Bezerra",
-    info: "Summer Camp 2020",
-  },
-  {
-    text: "Subvisual’s Summer Camp absolutely exceeded my expectations and helped me grow both as a person and as a designer. I am completely delighted that I took the chance to apply; and joining the team as a full-time designer afterwards was definitely the cherry on top of a great experience. ",
-    author: "Filipa Ribeiro",
-    info: "Summer Camp 2021",
-  },
-  // {
-  //   text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis repudiandae id nisi inventore ipsum omnis impedit blanditiis voluptatum eveniet fuga corrupti, ducimus velit veritatis quasi ipsa soluta ad ratione sed!",
-  //   author: "John Doe",
-  //   info: "Summer Camp 2020",
-  // },
-];
-
 function ArrowButton(props) {
   const directions = {
     left: { transform: "scale(1, 1)" },
@@ -47,24 +29,24 @@ function ArrowButton(props) {
   );
 }
 
-export default function Testimonials(props) {
+export default function Testimonials({ testimonials }) {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   function slideLeft() {
     setCurrentSlide(
-      currentSlide - 1 < 0 ? TESTIMONIALS.length - 1 : currentSlide - 1
+      currentSlide - 1 < 0 ? testimonials.length - 1 : currentSlide - 1
     );
   }
 
   function slideRight() {
-    setCurrentSlide((currentSlide + 1) % TESTIMONIALS.length);
+    setCurrentSlide((currentSlide + 1) % testimonials.length);
   }
 
   return (
     <div className="testimonials has-background-blue-light">
       <div className="columns">
         <div className="content">
-          {TESTIMONIALS.map((testimonial, index) => {
+          {testimonials.map((testimonial, index) => {
             return (
               <div
                 key={index}
@@ -73,9 +55,10 @@ export default function Testimonials(props) {
                 }
               >
                 <div className="text">
-                  <p className="has-font-family-secondary has-font-size-medium">
-                    {testimonial.text}
-                  </p>
+                  <div
+                    className="has-font-family-secondary has-font-size-medium"
+                    dangerouslySetInnerHTML={{ __html: testimonial.quote }}
+                  ></div>
                 </div>
                 <div className="author">
                   <p>{testimonial.author}</p>

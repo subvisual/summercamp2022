@@ -1,6 +1,7 @@
 import "../index.css";
 import "./Home.css";
 
+import { graphql } from "gatsby";
 import React, { Fragment } from "react";
 import Testimonials from "../component/Testimonials";
 import FAQs from "../component/FAQs";
@@ -157,9 +158,9 @@ function AreYouUp() {
   );
 }
 
-function DontJustTake() {
+function DontJustTake({ testimonials }) {
   return (
-    <div className="dont-just-take">
+    <div className="dont-just-take" id="testimonials">
       <div className="container">
         <div className="columns">
           <div className="top has-font-size-large">
@@ -170,7 +171,7 @@ function DontJustTake() {
             </h2>
           </div>
           <div className="bottom">
-            <Testimonials />
+            <Testimonials testimonials={testimonials} />
           </div>
         </div>
       </div>
@@ -178,9 +179,9 @@ function DontJustTake() {
   );
 }
 
-function Showcase() {
+function Showcase({ projects }) {
   return (
-    <div className="showcase">
+    <div className="showcase" id="projects">
       <div className="container">
         <div className="columns">
           <div className="header has-font-size-large">
@@ -190,7 +191,7 @@ function Showcase() {
           </div>
         </div>
         <div className="projects">
-          <ProjectShowcase />
+          <ProjectShowcase projects={projects} />
         </div>
       </div>
     </div>
@@ -199,7 +200,7 @@ function Showcase() {
 
 function HowItWorks() {
   return (
-    <div className="how-it-works">
+    <div className="how-it-works" id="how-it-works">
       <div className="container">
         <div className="background has-background-blue-dark">
           <div className="columns">
@@ -245,9 +246,9 @@ function HowItWorks() {
   );
 }
 
-function SomeQuestions() {
+function SomeQuestions({ faqs }) {
   return (
-    <div className="some-questions">
+    <div className="some-questions" id="faqs">
       <div className="container">
         <div className="columns">
           <div className="top">
@@ -256,7 +257,7 @@ function SomeQuestions() {
             </h2>
           </div>
           <div className="bottom">
-            <FAQs />
+            <FAQs faqs={faqs} />
           </div>
         </div>
       </div>
@@ -363,7 +364,43 @@ function Footer() {
   );
 }
 
-function Home() {
+function filterContentType(data, contentType) {
+  return data.allMarkdownRemark.edges.filter(
+    (i) => i.node.frontmatter.contentType === contentType
+  );
+}
+
+function toFaq({ node }) {
+  return {
+    id: node.id,
+    title: node.frontmatter.title,
+    text: node.html,
+  };
+}
+
+function toProject({ node }) {
+  return {
+    id: node.id,
+    title: node.frontmatter.title,
+    description: node.html,
+    image: node.frontmatter.image,
+  };
+}
+
+function toTestimonial({ node }) {
+  return {
+    id: node.id,
+    author: node.frontmatter.title,
+    info: node.frontmatter.info,
+    quote: node.html,
+  };
+}
+
+function Home(props) {
+  const faqs = props.data.faqs.edges.map(toFaq);
+  const projects = props.data.projects.edges.map(toProject);
+  const testimonials = props.data.testimonials.edges.map(toTestimonial);
+
   return (
     <Fragment>
       <div className="fold has-background-blue-light">
@@ -371,10 +408,10 @@ function Home() {
         <JoinUs />
       </div>
       <AreYouUp />
-      <DontJustTake />
-      <Showcase />
+      <DontJustTake testimonials={testimonials} />
+      <Showcase projects={projects} />
       <HowItWorks />
-      <SomeQuestions />
+      <SomeQuestions faqs={faqs} />
       <TalkToUs />
       <div className="fold has-background-blue Position-background">
         <div className="backgroundImage"></div>
@@ -386,3 +423,49 @@ function Home() {
 }
 
 export default Home;
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    faqs: allMarkdownRemark(
+      filter: { frontmatter: { contentType: { eq: "faq" } } }
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
+    projects: allMarkdownRemark(
+      filter: { frontmatter: { contentType: { eq: "project" } } }
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+            image
+          }
+        }
+      }
+    }
+    testimonials: allMarkdownRemark(
+      filter: { frontmatter: { contentType: { eq: "testimonial" } } }
+    ) {
+      edges {
+        node {
+          id
+          html
+          frontmatter {
+            title
+            info
+          }
+        }
+      }
+    }
+  }
+`;
