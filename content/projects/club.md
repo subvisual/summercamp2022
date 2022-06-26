@@ -1,7 +1,7 @@
 ---
 contentType: project
 subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
-title: YAMS
+title: Book Club
 image: /uploads/03-ping-split-bill.png
 ---
 

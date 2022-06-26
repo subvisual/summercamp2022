@@ -3,6 +3,7 @@
   max-width: 1324px;
   margin: 0 auto 224px;
   padding-top: 45px;
+  margin-top: 49px;
   position: relative;
   overflow: hidden;
   min-height: 100vh;
@@ -15,6 +16,7 @@
   bottom: 0;
   left: 0;
   opacity: 0.9;
+  pointer-events: none;
 }
 
 .join-us {
@@ -32,7 +34,7 @@
 }
 
 .join-us .title {
-  line-height: 106px;
+  max-width: 600px;
 }
 
 .join-us .content {
@@ -126,6 +128,7 @@
 .are-you-up .challenge .header {
   grid-column: span 7;
   margin-bottom: 42px;
+  max-width: 600px;
 }
 
 .are-you-up .challenge .firstphoto {
@@ -159,6 +162,8 @@
 }
 .line {
   width: 69px;
+  flex-basis: 69px;
+  flex-shrink: 0;
   border-top: 1px solid #9563ff;
 }
 .are-you-up .if-you-like .line {
@@ -205,13 +210,17 @@
 }
 
 .talk-to-us {
-  margin-bottom: 224px;
+  margin-bottom: 175px;
 }
+
 .talk-to-us .title {
   margin-bottom: 42px;
 }
+
 .onboard {
   margin-bottom: 112px;
+  position: relative;
+  z-index: 1;
 }
 
 .onboard .title {
@@ -251,6 +260,11 @@
   color: var(--color-coral);
 }
 
+.footer .left,
+.footer .right {
+  margin-bottom: 56px;
+}
+
 .footer .left {
   grid-column: span 6;
 }
@@ -271,18 +285,16 @@
 .contact-us {
   margin-bottom: 20px;
 }
+
 .contact-us .content {
   margin-bottom: 84px;
-}
-.go-to-content {
-  margin-bottom: 56px;
 }
 
 .we-social-content {
   display: flex;
   flex-direction: row;
   column-gap: 28px;
-  padding-bottom: 104px;
+  padding-bottom: 48px;
   flex-wrap: wrap;
 }
 
@@ -298,7 +310,34 @@
   max-width: 100%;
 }
 
+@media (max-width: 1200px) {
+  .are-you-up .columns {
+    display: block;
+  }
+
+  .are-you-up .your-opportunity .item {
+    margin-bottom: 16px;
+  }
+
+  .join-us .columns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .join-us .title {
+    margin-bottom: 64px;
+  }
+
+  .join-us .item .text {
+    margin-top: 42px;
+  }
+}
+
 @media (max-width: 800px) {
+  .fold {
+    margin-top: 0;
+  }
+
   .showcase .header {
     grid-column: 1 / span 12;
   }
@@ -325,15 +364,6 @@
     margin-bottom: 20px;
   }
 
-  .join-us .columns {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .join-us .title {
-    margin-bottom: 64px;
-  }
-
   .if-you-like .columns {
     display: flex;
     flex-direction: column;
@@ -343,7 +373,34 @@
     margin-bottom: 64px;
   }
 
+  .footer .columns {
+    display: block;
+  }
+
+  .we-social-content {
+    padding-bottom: 0;
+    column-gap: 20px;
+  }
+}
+
+@media (max-width: 650px) {
   .are-you-up .your-opportunity .item {
-    margin-bottom: 16px;
+    padding: 28px;
+  }
+
+  .are-you-up .your-opportunity .header {
+    margin-bottom: 64px;
+  }
+
+  .dont-just-take .top {
+    margin-bottom: 64px;
+  }
+
+  .some-questions .top {
+    padding-bottom: 64px;
+  }
+
+  .are-you-up .if-you-like {
+    margin: 200px 0;
   }
 }

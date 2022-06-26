@@ -13,6 +13,8 @@
   display: flex;
   grid-column: 7 / span 6;
   grid-row: 1;
+  max-height: 320px;
+  overflow: hidden;
 }
 
 .project-showcase .project .project-image img {
@@ -48,6 +50,7 @@
 .project-showcase .project .project-title {
   display: flex;
   align-items: center;
+  text-transform: uppercase;
 }
 
 .project-showcase .project .project-title .line {

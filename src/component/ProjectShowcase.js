@@ -11,7 +11,6 @@ function Project(props) {
         <div className="project-details">
           <div className="project-title has-font-size-small ">
             <div className="line"></div>
-
             <p>{props.title}</p>
           </div>
           <div className="project-subtitle has-font-family-secondary has-font-size-medium">

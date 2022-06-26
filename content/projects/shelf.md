@@ -1,7 +1,7 @@
 ---
 contentType: project
+title: Shelf
 subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
-title: YAMS
 image: /uploads/03-ping-split-bill.png
 ---
 

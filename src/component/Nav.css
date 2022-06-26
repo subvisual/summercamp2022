@@ -1,15 +1,28 @@
 .nav-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.nav-content .menu {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 42px;
+  align-items: center;
 }
 
 .nav .toggle {
   display: none;
 }
 
-.nav .menu a {
-  margin-right: 42px;
+.nav .menu a:not(:last-child) {
   text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  .nav-content .menu {
+    column-gap: 20px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -59,5 +72,11 @@
   .nav .button {
     border-color: var(--color-white);
     width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .nav .brand img {
+    max-width: 156px;
   }
 }

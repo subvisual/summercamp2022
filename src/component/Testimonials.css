@@ -36,3 +36,9 @@
     display: flex;
   }
 }
+
+@media (max-width: 800px) {
+  .testimonials .author {
+    margin-bottom: 42px;
+  }
+}

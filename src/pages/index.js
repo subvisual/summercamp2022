@@ -28,13 +28,12 @@ function JoinUs() {
 
           <div className="right">
             <div className="item">
-              <h2 className="has-font-size-xlarge ">
-                <span>on a </span>
+              <h2 className="title has-font-size-xlarge">
+                on a{" "}
                 <span className="has-text-blue has-font-family-secondary">
                   hands-on
-                </span>
-                <br />
-                <span>approach</span>
+                </span>{" "}
+                approach
               </h2>
               <div className="text has-font-size-small">
                 <p>
@@ -66,9 +65,7 @@ function JoinUs() {
             </div>
             <div className="item">
               <h2 className="title has-font-size-xlarge ">
-                <span> with the support of</span>
-                <br />
-                <span>a </span>
+                <span>with the support of</span> <span>a</span>{" "}
                 <span className="has-text-blue has-font-family-secondary">
                   great team
                 </span>
@@ -123,15 +120,15 @@ function AreYouUp() {
 
             <div className="right has-text-blue has-font-family-secondary has-font-size-large">
               <div className="item">
-                <div class="line"></div>
+                <div className="line"></div>
                 <p>product design</p>
               </div>
               <div className="item">
-                <div class="line"></div>
+                <div className="line"></div>
                 <p>product management</p>
               </div>
               <div className="item">
-                <div class="line"></div>
+                <div className="line"></div>
                 <p>programming</p>
               </div>
             </div>
@@ -145,15 +142,18 @@ function AreYouUp() {
           </div>
           <div className="columns">
             <div className="item has-background-blue has-font-size-medium ">
-              <div className="title ">01</div>
+              <div className="title">01</div>
+              <br />
               <p>Get professional experience</p>
             </div>
             <div className="item has-background-blue-dark has-font-size-medium">
               <div className="title">02</div>
+              <br />
               <p>Meet other talented people</p>
             </div>
             <div className="item has-background-purple has-font-size-medium">
               <div className="title">03</div>
+              <br />
               <p>Learn with experienced mentors</p>
             </div>
           </div>
@@ -206,7 +206,7 @@ function Showcase({ projects }) {
 function HowItWorks() {
   return (
     <div className="how-it-works" id="how-it-works">
-      <div className="container">
+      <div className="container without-padding">
         <div className="background has-background-blue-dark">
           <div className="columns">
             <div className="top">
@@ -305,14 +305,14 @@ function Onboard() {
 
 function Footer() {
   return (
-    <footer className="footer has-font-size-small">
+    <footer className="footer has-font-size-small has-text-grey">
       <div className="container">
         <div className="columns">
           <div className="left">
             <div className="go-to has-text-blue has-font-size-medium">
               Go to
             </div>
-            <div className="go-to-content">
+            <div className="go-to-content has-font-size-small">
               <div className="item1">Subvisual</div>
               <div className="item2">Blog</div>
             </div>
@@ -322,7 +322,7 @@ function Footer() {
             <div className="we-social has-text-blue has-font-size-medium">
               We're social
             </div>
-            <div className="we-social-content">
+            <div className="we-social-content has-font-size-small">
               <div className="item">Md</div>
               <div className="item">Be</div>
               <div className="item">Git</div>
@@ -338,15 +338,17 @@ function Footer() {
             <div className="contact-us has-text-blue has-font-size-medium">
               Contact us
             </div>
-            <div className="contact-us content">contact@subvisual.co</div>
+            <div className="contact-us content  has-font-size-small">
+              contact@subvisual.co
+            </div>
           </div>
 
           <div className="right">
             <div className="offices has-text-blue has-font-size-medium">
               Offices
             </div>
-            <div className="offices-content">
-              Remote.Work anywhere in Europe.
+            <div className="offices-content  has-font-size-small">
+              Remote. Work anywhere in Europe.
               <br />
               Or join our mothership,landed in Braga, Portugal.
             </div>
@@ -387,6 +389,7 @@ function toProject({ node }) {
   return {
     id: node.id,
     title: node.frontmatter.title,
+    subtitle: node.frontmatter.subtitle,
     description: node.html,
     image: node.frontmatter.image,
   };
@@ -457,6 +460,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             image
+            subtitle
           }
         }
       }
