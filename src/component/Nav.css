@@ -31,7 +31,16 @@
 }
 
 .mobile-menu .brand {
-  margin-bottom: 116px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mobile-menu .nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 @media (max-width: 1200px) {
@@ -74,22 +83,36 @@
 
   .nav .close {
     cursor: pointer;
-    position: absolute;
-    top: 72px;
-    right: 72px;
-    font-size: 56px;
-    line-height: 0.5;
     background-color: transparent;
     color: inherit;
     border: 0;
+    height: 40px;
+    width: 40px;
+    transform: translateY(-10px);
+  }
+
+  .nav .close::after,
+  .nav .close::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+  }
+
+  .nav .close::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  .nav .close::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 
   .nav .toggle {
     cursor: pointer;
-  }
-
-  .nav .menu-item {
-    margin-bottom: 64px;
   }
 
   .nav .menu-item a {
@@ -105,5 +128,9 @@
 @media (max-width: 650px) {
   .nav .brand img {
     max-width: 156px;
+  }
+
+  .mobile-menu {
+    padding: 42px;
   }
 }
