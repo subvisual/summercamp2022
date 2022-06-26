@@ -282,6 +282,10 @@
   margin-bottom: 20px;
 }
 
+.footer .image img {
+  max-width: 100%;
+}
+
 .contact-us {
   margin-bottom: 20px;
 }
