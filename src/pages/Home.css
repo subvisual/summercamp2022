@@ -101,7 +101,7 @@
   border-radius: 28px;
   border: 1px solid var(--color-white);
   padding: 28px;
-  transition: transform ease-in-out 0.25s;
+  transition: all ease-in-out 0.25s;
   flex: 1;
 }
 

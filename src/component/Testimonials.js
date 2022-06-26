@@ -45,6 +45,7 @@ export default function Testimonials({ testimonials }) {
   return (
     <div className="testimonials has-background-blue-light">
       <div className="columns">
+        <div className="background"></div>
         <div className="content">
           {testimonials.map((testimonial, index) => {
             return (
