@@ -48,7 +48,7 @@ export default function Nav() {
                 Join Us
               </a>
             </div>
-            <div className="toggle" onClick={toggleMenu}></div>
+            <button className="toggle" onClick={toggleMenu}></button>
           </div>
         </div>
       </nav>
