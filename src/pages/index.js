@@ -3,6 +3,9 @@ import "./Home.css";
 
 import { graphql } from "gatsby";
 import React, { Fragment } from "react";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import Testimonials from "../component/Testimonials";
 import FAQs from "../component/FAQs";
 import ProjectShowcase from "../component/ProjectShowcase";
@@ -12,10 +15,12 @@ import SecondPhotoChallenge from "../images/SecondPhotoChallenge.jpg";
 import ImageBackground from "../images/ImageBackground.png";
 import ImageFooter from "../images/ImageFooter.jpg";
 import Campers1 from "../images/Campers1.jpg";
+import ThreeDee from "../component/ThreeDee";
+
 function JoinUs() {
   return (
     <div className="join-us">
-      <div className="container">
+      <div className="container content">
         <div className="columns">
           <div className="left">
             <h2 className="title has-font-size-xlarge">Join us</h2>
@@ -23,7 +28,7 @@ function JoinUs() {
 
           <div className="right">
             <div className="item">
-              <h2 className="title has-font-size-xlarge ">
+              <h2 className="has-font-size-xlarge ">
                 <span>on a </span>
                 <span className="has-text-blue has-font-family-secondary">
                   hands-on
@@ -404,6 +409,9 @@ function Home(props) {
   return (
     <Fragment>
       <div className="fold has-background-blue-light">
+        <div className="background">
+          <ThreeDee />
+        </div>
         <Nav />
         <JoinUs />
       </div>
