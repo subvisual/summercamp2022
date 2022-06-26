@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: anaritacanelas/summerCamp
   branch: main
 
 local_backend: true
@@ -23,6 +24,12 @@ collections:
     fields:
       - { name: "contentType", widget: hidden, default: project }
       - { label: "Title", name: "title", widget: "string", required: true }
+      - {
+          label: "Subtitle",
+          name: "subtitle",
+          widget: "string",
+          required: true,
+        }
       - {
           label: "Description",
           name: "body",
