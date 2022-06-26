@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { BakeShadows, Environment, PerspectiveCamera } from "@react-three/drei";
 import {
@@ -70,10 +70,16 @@ function LightSource() {
 
 function ThreeDee(props) {
   const left = -3;
+  const [zoom, setZoom] = useState(1);
+
+  useLayoutEffect(() => {
+    if (window.innerWidth < 900) return setZoom(0.7);
+    if (window.innerWidth < 600) return setZoom(0.5);
+  }, []);
 
   return (
     <Canvas>
-      <PerspectiveCamera makeDefault {...props}></PerspectiveCamera>
+      <PerspectiveCamera makeDefault zoom={zoom} {...props}></PerspectiveCamera>
       {/* <fog attach="fog" color="#ff7b9b" near={1} far={20} /> */}
       <ambientLight intensity={0.7} />
       <LightSource />
