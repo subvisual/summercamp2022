@@ -7,7 +7,7 @@ import React, { Fragment } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 
 import Nav from "../component/Nav";
-import ThreeDee from "../component/ThreeDee";
+import ThreeDee from "../component/ThreeDeeLazy";
 import Seo from "../component/Seo";
 import JoinUs from "../component/Home/JoinUs";
 import AreYouUp from "../component/Home/AreYouUp";
