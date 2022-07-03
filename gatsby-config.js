@@ -1,7 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Summer Camp 2022`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "Summer Camp",
+    titleTemplate: "%s · Subvisual",
+    description: "An internship program at Subvisual.",
+    url: "https://subvisual.com",
+    image: "/meta.png",
+    twitterUsername: "@subvisual",
   },
   plugins: [
     "gatsby-plugin-image",
@@ -57,5 +61,12 @@ module.exports = {
       __key: "testimonials",
     },
     "gatsby-plugin-netlify-cms",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Summer Camp Subvisual`,
+        icon: `src/images/favicon.png`,
+      },
+    },
   ],
 };

@@ -1,8 +1,5 @@
 import "./ProjectShowcase.css";
 import React from "react";
-import Campers1 from "../images/Campers1.jpg";
-import Campers2 from "../images/Campers2.jpg";
-import Campers3 from "../images/Campers3.jpg";
 
 function Project(props) {
   return (

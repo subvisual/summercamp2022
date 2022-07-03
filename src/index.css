@@ -3,11 +3,13 @@
 @font-face {
   font-family: "Colfax";
   src: url("fonts/Colfax-Regular.otf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Acta";
   src: url("fonts/Acta-Book.otf");
+  font-display: swap;
 }
 
 /* Variables */

@@ -2,20 +2,20 @@ import "../index.css";
 import "./Home.css";
 
 import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 import React, { Fragment } from "react";
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { StaticImage } from "gatsby-plugin-image";
 
 import Testimonials from "../component/Testimonials";
 import FAQs from "../component/FAQs";
 import ProjectShowcase from "../component/ProjectShowcase";
 import Nav from "../component/Nav";
-import FirstPhotoChallenge from "../images/FirstPhotoChallenge.jpg";
-import SecondPhotoChallenge from "../images/SecondPhotoChallenge.jpg";
-import ImageBackground from "../images/ImageBackground.png";
 import ImageFooter from "../images/ImageFooter.jpg";
-import Campers1 from "../images/Campers1.jpg";
 import ThreeDee from "../component/ThreeDee";
+import Seo from "../component/Seo";
+
+import fontActa from "../fonts/Acta-Book.otf";
+import fontColfaxRegular from "../fonts/Colfax-Regular.otf";
 
 function JoinUs() {
   return (
@@ -104,11 +104,20 @@ function AreYouUp() {
               </div>
             </div>
             <div className="firstphoto">
-              <img src={FirstPhotoChallenge} aria-hidden="true" alt="" />
+              <StaticImage
+                className="img"
+                loading="lazy"
+                src="../images/FirstPhotoChallenge.jpg"
+                alt=""
+              />
             </div>
-
             <div className="secondphoto">
-              <img src={SecondPhotoChallenge} aria-hidden="true" alt="" />
+              <StaticImage
+                className="img"
+                loading="lazy"
+                src="../images/SecondPhotoChallenge.jpg"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -371,12 +380,6 @@ function Footer() {
   );
 }
 
-function filterContentType(data, contentType) {
-  return data.allMarkdownRemark.edges.filter(
-    (i) => i.node.frontmatter.contentType === contentType
-  );
-}
-
 function toFaq({ node }) {
   return {
     id: node.id,
@@ -411,6 +414,11 @@ function Home(props) {
 
   return (
     <Fragment>
+      <Helmet>
+        <link rel="preload" href={fontActa} as="font" crossorigin />
+        <link rel="preload" href={fontColfaxRegular} as="font" crossorigin />
+      </Helmet>
+      <Seo />
       <div className="fold has-background-blue-light">
         <div className="background">
           <ThreeDee />
@@ -425,7 +433,14 @@ function Home(props) {
       <SomeQuestions faqs={faqs} />
       <TalkToUs />
       <div className="fold has-background-blue Position-background">
-        <div className="backgroundImage"></div>
+        <StaticImage
+          className="backgroundImage"
+          loading="lazy"
+          objectFit="contain"
+          objectPosition="right top"
+          src="../images/ImageBackground.png"
+          alt=""
+        />
         <Onboard />
       </div>
       <Footer />

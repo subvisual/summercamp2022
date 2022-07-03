@@ -48,7 +48,11 @@ export default function Nav() {
                 Join Us
               </a>
             </div>
-            <button className="toggle" onClick={toggleMenu}></button>
+            <button
+              className="toggle"
+              aria-label="Toggle Menu"
+              onClick={toggleMenu}
+            ></button>
           </div>
         </div>
       </nav>

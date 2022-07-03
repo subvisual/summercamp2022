@@ -1,13 +1,6 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { BakeShadows, Environment, PerspectiveCamera } from "@react-three/drei";
-import {
-  EffectComposer,
-  DepthOfField,
-  Bloom,
-  Noise,
-  Vignette,
-} from "@react-three/postprocessing";
 import * as THREE from "three";
 
 import metal from "../images/metal.jpg";
