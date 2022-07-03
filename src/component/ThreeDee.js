@@ -67,7 +67,6 @@ function ThreeDee(props) {
 
   useLayoutEffect(() => {
     const width = document.body.clientWidth;
-    console.log(width);
 
     if (width < 600) return setZoom(0.4);
     if (width < 900) return setZoom(0.6);
