@@ -23,7 +23,7 @@ export default function AreYouUp() {
               <StaticImage
                 className="img"
                 loading="lazy"
-                src="../images/FirstPhotoChallenge.jpg"
+                src="../../images/FirstPhotoChallenge.jpg"
                 alt=""
               />
             </div>
@@ -31,7 +31,7 @@ export default function AreYouUp() {
               <StaticImage
                 className="img"
                 loading="lazy"
-                src="../images/SecondPhotoChallenge.jpg"
+                src="../../images/SecondPhotoChallenge.jpg"
                 alt=""
               />
             </div>

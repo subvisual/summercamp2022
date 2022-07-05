@@ -1,8 +1,8 @@
 ---
 contentType: project
 title: Shelf
-subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
-image: /uploads/03-ping-split-bill.png
+subtitle: Our very own online library
+image: /uploads/shelf.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+The goal was to build a tool that would enable book sharing within the team in a seamless manner. The outcome was a web app where we list all the books in Subvisual’s library, working as an online repository that allows people to borrow the book online. To help people know which book to choose, the team can add comments and ratings to the ones they’ve read, making this a truly collaborative tool.

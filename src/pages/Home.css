@@ -385,7 +385,7 @@
   }
 
   .fold .background {
-    transform: translateY(-400px);
+    display: none;
   }
 }
 
@@ -415,6 +415,6 @@
   }
 
   .fold .background {
-    transform: translateY(-200px);
+    display: none;
   }
 }

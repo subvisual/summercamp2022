@@ -1,8 +1,8 @@
 ---
 contentType: project
-subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+subtitle: Internal processes made simple
 title: YAMS
-image: /uploads/03-ping-split-bill.png
+image: /uploads/yams.png
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+The challenge was to build an internal database where we could gather information from our team that would make everyday management and HR processes smoother. In the end, we built just that: a platform where we can easily access team data such as addresses, ID number, among others.
