@@ -11,7 +11,10 @@ export default function Onboard() {
           >
             We'd love to have <br /> you on board!
           </div>
-          <a href="/" className="button has-font-size-medium">
+          <a
+            href="https://jobs.subvisual.com/summer-camp-program"
+            className="button has-font-size-medium"
+          >
             Join us
           </a>
         </div>

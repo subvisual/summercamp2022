@@ -44,7 +44,11 @@ export default function Nav() {
               <a className="has-font-size-small has-text-black" href="#faqs">
                 FAQ
               </a>
-              <a href="/" className="button is-small">
+              <a
+                href="https://jobs.subvisual.com/summer-camp-program"
+                target="_blank"
+                className="button is-small"
+              >
                 Join Us
               </a>
             </div>
@@ -147,7 +151,10 @@ export default function Nav() {
             </a>
           </div>
           <div>
-            <a href="/" className="button has-font-size-small has-text-white">
+            <a
+              href="https://jobs.subvisual.com/summer-camp-program"
+              className="button has-font-size-small has-text-white"
+            >
               Join us
             </a>
           </div>
