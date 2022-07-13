@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import React, { Fragment } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { ParallaxProvider } from "react-scroll-parallax";
 
 import Nav from "../component/Nav";
 import ThreeDee from "../component/ThreeDeeLazy";
@@ -55,38 +56,40 @@ function Home(props) {
   const testimonials = props.data.testimonials.edges.map(toTestimonial);
 
   return (
-    <Fragment>
-      <Helmet>
-        <link rel="preload" href={fontActa} as="font" crossorigin />
-        <link rel="preload" href={fontColfaxRegular} as="font" crossorigin />
-      </Helmet>
-      <Seo />
-      <div className="fold has-background-blue-light">
-        <div className="background">
-          <ThreeDee />
+    <ParallaxProvider>
+      <Fragment>
+        <Helmet>
+          <link rel="preload" href={fontActa} as="font" crossorigin />
+          <link rel="preload" href={fontColfaxRegular} as="font" crossorigin />
+        </Helmet>
+        <Seo />
+        <div className="fold has-background-blue-light">
+          <div className="background">
+            <ThreeDee />
+          </div>
+          <Nav />
+          <JoinUs />
         </div>
-        <Nav />
-        <JoinUs />
-      </div>
-      <AreYouUp />
-      <DontJustTake testimonials={testimonials} />
-      <Showcase projects={projects} />
-      <HowItWorks />
-      <SomeQuestions faqs={faqs} />
-      <TalkToUs />
-      <div className="fold has-background-blue Position-background">
-        <StaticImage
-          className="backgroundImage"
-          loading="lazy"
-          objectFit="contain"
-          objectPosition="right top"
-          src="../images/ImageBackground.png"
-          alt=""
-        />
-        <Onboard />
-      </div>
-      <Footer />
-    </Fragment>
+        <AreYouUp />
+        <DontJustTake testimonials={testimonials} />
+        <Showcase projects={projects} />
+        <HowItWorks />
+        <SomeQuestions faqs={faqs} />
+        <TalkToUs />
+        <div className="fold has-background-blue Position-background">
+          <StaticImage
+            className="backgroundImage"
+            loading="lazy"
+            objectFit="contain"
+            objectPosition="right top"
+            src="../images/ImageBackground.png"
+            alt=""
+          />
+          <Onboard />
+        </div>
+        <Footer />
+      </Fragment>
+    </ParallaxProvider>
   );
 }
 

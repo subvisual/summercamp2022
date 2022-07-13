@@ -1,5 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { Parallax } from "react-scroll-parallax";
 
 export default function AreYouUp() {
   return (
@@ -20,20 +21,24 @@ export default function AreYouUp() {
               </div>
             </div>
             <div className="firstphoto">
-              <StaticImage
-                className="img"
-                loading="lazy"
-                src="../../images/FirstPhotoChallenge.jpg"
-                alt=""
-              />
+              <Parallax speed={-10} easing="easeInQuad" rotate={[0, 5]}>
+                <StaticImage
+                  className="img"
+                  loading="lazy"
+                  src="../../images/FirstPhotoChallenge.jpg"
+                  alt=""
+                />
+              </Parallax>
             </div>
             <div className="secondphoto">
-              <StaticImage
-                className="img"
-                loading="lazy"
-                src="../../images/SecondPhotoChallenge.jpg"
-                alt=""
-              />
+              <Parallax speed={10} easing="easeInQuad" rotate={[0, -5]}>
+                <StaticImage
+                  className="img"
+                  loading="lazy"
+                  src="../../images/SecondPhotoChallenge.jpg"
+                  alt=""
+                />
+              </Parallax>
             </div>
           </div>
         </div>
