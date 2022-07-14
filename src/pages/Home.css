@@ -233,14 +233,16 @@
 }
 
 .backgroundImage {
-  /* background-image: url("../images/ImageBackground.png"); 
+  background-image: url("../images/ImageBackground.png");
   background-position: right top;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat;
   opacity: 0.9;
   mix-blend-mode: multiply;
   position: absolute;
   top: 0;
   right: 0;
+  left: 0;
+  bottom: 0;
   pointer-events: none;
 }
 

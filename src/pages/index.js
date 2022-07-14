@@ -76,15 +76,16 @@ function Home(props) {
         <HowItWorks />
         <SomeQuestions faqs={faqs} />
         <TalkToUs />
-        <div className="fold has-background-blue Position-background">
-          <StaticImage
-            className="backgroundImage"
+        <div className="has-background-blue Position-background">
+          <div className="backgroundImage"></div>
+          {/* <StaticImage
+            className="img"
             loading="lazy"
             objectFit="contain"
             objectPosition="right top"
             src="../images/ImageBackground.png"
             alt=""
-          />
+          /> */}
           <Onboard />
         </div>
         <Footer />
