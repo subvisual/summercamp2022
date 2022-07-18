@@ -21,7 +21,7 @@ export default function AreYouUp() {
               </div>
             </div>
             <div className="firstphoto">
-              <Parallax speed={-10} easing="easeInQuad" rotate={[0, 5]}>
+              <Parallax speed={-5} easing="easeInQuad" rotate={[0, 4]}>
                 <StaticImage
                   className="img"
                   loading="lazy"
@@ -31,7 +31,7 @@ export default function AreYouUp() {
               </Parallax>
             </div>
             <div className="secondphoto">
-              <Parallax speed={10} easing="easeInQuad" rotate={[0, -5]}>
+              <Parallax speed={10} easing="easeInQuad" rotate={[0, -4]}>
                 <StaticImage
                   className="img"
                   loading="lazy"
