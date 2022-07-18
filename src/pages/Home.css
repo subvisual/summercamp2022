@@ -16,7 +16,6 @@
   pointer-events: none;
   width: 1000px;
   height: 540px;
-  overflow: hidden;
   position: relative;
   left: -500px;
 }
@@ -24,7 +23,8 @@
 .join-us .left {
   grid-column: span 4;
   position: sticky;
-  top: 377px;
+  top: 380px;
+  margin-bottom: 162px;
 }
 
 .join-us .right {
@@ -38,7 +38,7 @@
 }
 
 .join-us .item {
-  margin-bottom: 224px;
+  margin-bottom: 448px;
   transition: opacity 0.8s ease-out;
   visibility: visible;
   will-change: opacity, visibility;
@@ -399,6 +399,10 @@
   .join-us .left {
     position: static;
     margin-bottom: 64px;
+  }
+
+  .join-us .item {
+    margin-bottom: 224px;
   }
 }
 

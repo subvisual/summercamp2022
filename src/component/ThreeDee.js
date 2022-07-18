@@ -1,69 +1,55 @@
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { BakeShadows, Environment, PerspectiveCamera } from "@react-three/drei";
+import { Environment, PerspectiveCamera } from "@react-three/drei";
 import * as THREE from "three";
 
-import metal from "../images/metal.jpg";
+import stripesImage from "../images/stripes.webp";
 
 function Cylinder(props) {
   const ref = useRef();
-  const speed = 0.002;
-  const base = new THREE.TextureLoader().load(metal);
+  const speed = 0.008;
+  const tilt = -0.05;
+  const base = new THREE.TextureLoader().load(stripesImage);
 
   useFrame((state, delta) => {
     ref.current.rotation.y += speed;
   });
 
   return (
-    <mesh {...props} ref={ref}>
-      <cylinderGeometry args={[4.2, 4.2, 0.01, 128]} />
-      <meshStandardMaterial
-        color={"#045cfc"}
-        map={base}
-        roughness={0.2}
-        metalness={0.2}
-        envMapIntensity={0.6}
-      />
-    </mesh>
+    <group {...props} ref={ref}>
+      <mesh rotation={[(90 * Math.PI) / 180, tilt, 0]}>
+        <torusGeometry args={[5.2, 1.3, 2, 300]} />
+        <meshToonMaterial color={"#045cfc"} map={base} />
+      </mesh>
+    </group>
   );
 }
 
 function Sphere(props) {
   const ref = useRef();
 
+  useFrame((state, delta) => {
+    ref.current.rotation.y += 0.001;
+  });
+
   return (
     <mesh {...props} ref={ref}>
-      <sphereGeometry args={[2.2, 64, 32]} />
+      <sphereGeometry args={[3.5, 64, 32]} />
       <meshStandardMaterial
         color={"#2421ab"}
-        roughness={0.4}
-        metalness={0.5}
-        envMapIntensity={0.9}
+        roughness={0.6}
+        metalness={0.4}
+        envMapIntensity={2.9}
       />
     </mesh>
   );
 }
 
-function LightSource() {
-  const ref = useRef();
-
-  // useFrame((state, delta) => {
-  //   ref.current.position.z = pingpong(10, delta * 3);
-  // });
-
-  return (
-    <directionalLight
-      ref={ref}
-      color="#045cfc"
-      position={[10, 15, -15]}
-      intensity={1}
-    />
-  );
-}
-
 function ThreeDee(props) {
-  const left = -3;
-  const [zoom, setZoom] = useState(1);
+  const x = 0;
+  const y = -4.5;
+  const z = -18;
+  const [zoom, setZoom] = useState(1.5);
 
   useLayoutEffect(() => {
     const width = document.body.clientWidth;
@@ -74,23 +60,29 @@ function ThreeDee(props) {
 
   return (
     <Canvas>
-      <PerspectiveCamera makeDefault zoom={zoom} {...props}></PerspectiveCamera>
-      {/* <fog attach="fog" color="#ff7b9b" near={1} far={20} /> */}
+      <PerspectiveCamera
+        makeDefault
+        zoom={zoom}
+        fov={50}
+        near={1}
+        rotation={[-0.25, 0, 0]}
+        {...props}
+      ></PerspectiveCamera>
+      <fog attach="fog" color="#ff7b9b" near={8} far={50} />
       <ambientLight intensity={0.7} />
-      <LightSource />
-      <Sphere position={[left, -1.5, -7]} />
-      <Cylinder position={[left, -1.5, -7]} rotation={[-0.05, 0, 0.1]} />
+      <directionalLight
+        color="#045cfc"
+        position={[-15, 10, 10]}
+        intensity={1.5}
+      />
+      <directionalLight
+        color="#045cfc"
+        position={[20, 5, -15]}
+        intensity={0.3}
+      />
+      <Sphere position={[x, y, z]} />
+      <Cylinder position={[x, y, z]} />
       <Environment preset="night" />
-      <BakeShadows />
-      {/* <EffectComposer multisampling={0} disableNormalPass={true}>
-        <Bloom
-          luminanceThreshold={0.2}
-          luminanceSmoothing={1}
-          height={300}
-          opacity={0.5}
-        />
-        <Vignette eskil={false} offset={0.2} darkness={0.7} />
-      </EffectComposer> */}
     </Canvas>
   );
 }

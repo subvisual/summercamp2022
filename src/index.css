@@ -160,12 +160,6 @@ a {
   font-size: 20px;
 }
 
-.Position-background {
-  /* background-color: var(--color-blue); */
-  position: relative;
-  overflow: hidden;
-}
-
 .image {
   max-width: 100%;
 }
