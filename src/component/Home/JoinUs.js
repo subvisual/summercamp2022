@@ -1,16 +1,56 @@
 import React from "react";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+
+import ThreeDee from "../../component/ThreeDeeLazy";
+
+const itemVariant = {
+  visible: { opacity: 1 },
+  hidden: { opacity: 0 },
+};
+
+function FadeItem(props) {
+  const control = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.75,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inView]);
+
+  return (
+    <motion.div
+      className="item"
+      ref={ref}
+      variants={itemVariant}
+      initial="hidden"
+      animate={control}
+    >
+      {props.children}
+    </motion.div>
+  );
+}
 
 export default function JoinUs() {
   return (
     <div className="join-us">
       <div className="container content">
-        <div className="columns">
+        <div className="columns" style={{ alignItems: "start" }}>
           <div className="left">
             <h2 className="title has-font-size-xlarge">Join us</h2>
+            <div className="background">
+              <ThreeDee />
+            </div>
           </div>
 
           <div className="right">
-            <div className="item">
+            <FadeItem>
               <h2 className="title has-font-size-xlarge">
                 on a{" "}
                 <span className="has-text-blue has-font-family-secondary">
@@ -27,8 +67,8 @@ export default function JoinUs() {
                   those values.
                 </p>
               </div>
-            </div>
-            <div className="item">
+            </FadeItem>
+            <FadeItem>
               <h2 className="title has-font-size-xlarge">
                 <span>to get a </span>
                 <span className="has-text-blue has-font-family-secondary">
@@ -45,8 +85,8 @@ export default function JoinUs() {
                   could be like.
                 </p>
               </div>
-            </div>
-            <div className="item">
+            </FadeItem>
+            <FadeItem>
               <h2 className="title has-font-size-xlarge ">
                 <span>with the support of</span> <span>a</span>{" "}
                 <span className="has-text-blue has-font-family-secondary">
@@ -60,7 +100,7 @@ export default function JoinUs() {
                   your decisions and help you choose wich path to follow.
                 </p>
               </div>
-            </div>
+            </FadeItem>
           </div>
         </div>
       </div>
