@@ -9,12 +9,15 @@ function Question(props) {
 
   return (
     <div className="question">
-      <div className="columns header" onClick={props.onToggle}>
+      <div className="header columns" onClick={props.onToggle}>
         <div className="left">
           <h3 className={titleClass}>{props.question.title}</h3>
         </div>
         <div className="right">
-          <div className="toggle">
+          <div
+            className="toggle"
+            style={props.question.open ? { transform: "scaleY(-1)" } : {}}
+          >
             <svg
               width="18"
               height="11"
@@ -24,7 +27,7 @@ function Question(props) {
             >
               <path
                 d="M2 2L9 9L16 2"
-                stroke="#403F4C"
+                stroke={props.question.open ? "#045cfc" : "#403F4C"}
                 strokeWidth="3"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -35,11 +38,14 @@ function Question(props) {
       </div>
       <div
         className={
-          "content has-font-size-small " +
+          "columns has-font-size-small " +
           (!props.question.open ? " is-hidden" : "")
         }
       >
-        <div dangerouslySetInnerHTML={{ __html: props.question.text }} />
+        <div
+          className="content"
+          dangerouslySetInnerHTML={{ __html: props.question.text }}
+        />
       </div>
     </div>
   );

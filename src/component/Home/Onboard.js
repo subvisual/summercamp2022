@@ -6,7 +6,7 @@ export default function Onboard() {
       <div className="box">
         <div className="container">
           <div
-            className="title has-font-size-large"
+            className="title has-font-size-xlarge"
             style={{ color: "var(--color-white)" }}
           >
             We'd love to have <br /> you on board!

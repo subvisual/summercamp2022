@@ -17,6 +17,7 @@
 :root {
   --color-black: #1a1a1a;
   --color-grey: #403f4c;
+  --color-grey-light: #717079;
   --color-white: #fff;
   --color-blue: #045cfc;
   --color-blue-dark: #2421ab;
@@ -49,6 +50,10 @@
 body {
   font-family: var(--font-primary);
   padding: 16px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
@@ -127,6 +132,11 @@ body {
   line-height: 28px;
 }
 
+.has-font-size-smallest {
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .button {
   color: var(--color-blue);
   border-radius: 180px;
@@ -136,6 +146,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
+  letter-spacing: 2px;
 }
 
 .button:hover {
@@ -144,7 +155,9 @@ body {
 }
 
 .button.is-small {
+  letter-spacing: 1px;
   padding: 14px 28px;
+  font-size: 20px;
 }
 
 .Position-background {

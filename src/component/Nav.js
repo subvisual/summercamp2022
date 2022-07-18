@@ -23,25 +23,16 @@ export default function Nav() {
               </a>
             </div>
             <div className="menu">
-              <a
-                className="has-font-size-small has-text-black"
-                href="#projects"
-              >
+              <a className="menu-link has-font-size-small" href="#projects">
                 Projects
               </a>
-              <a
-                className="has-font-size-small has-text-black"
-                href="#how-it-works"
-              >
+              <a className="menu-link has-font-size-small" href="#how-it-works">
                 How it works
               </a>
-              <a
-                className="has-font-size-small has-text-black"
-                href="#testimonials"
-              >
+              <a className="menu-link has-font-size-small" href="#testimonials">
                 Testimonials
               </a>
-              <a className="has-font-size-small has-text-black" href="#faqs">
+              <a className="menu-link has-font-size-small" href="#faqs">
                 FAQ
               </a>
               <a

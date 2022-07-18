@@ -3,29 +3,24 @@
 }
 
 .question .left {
-  grid-column: span 8;
+  grid-column: span 11;
 }
 
 .question .right {
-  grid-column: 12 / 12;
   display: flex;
   align-items: center;
 }
 
 .question .content {
-  grid-column: span 12;
+  grid-column: span 9;
   margin-bottom: 42px;
-  height: auto;
 }
 
 .question .header {
   cursor: pointer;
-  padding: 20px 0;
+  padding: 42px 0;
 }
 
-.question .columns {
-  padding: 42px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.question .title:hover {
+  color: var(--color-grey-light);
 }

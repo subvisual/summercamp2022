@@ -40,6 +40,16 @@ export default function HowItWorks() {
                   </p>
                 </div>
               </div>
+              <div className="row">
+                <div>
+                  <p className="has-font-size-smallest">
+                    * We do a pre-selection of the profiles that better match
+                    the requirements and only meet with those, however you will
+                    always get an email from us with a decision.
+                  </p>
+                </div>
+                <div></div>
+              </div>
             </div>
           </div>
         </div>

@@ -45,7 +45,7 @@
   margin-right: 40px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .testimonials .content {
     padding: 0 28px;
   }
@@ -57,9 +57,7 @@
   .testimonials .columns {
     display: flex;
   }
-}
 
-@media (max-width: 800px) {
   .testimonials .author {
     margin-bottom: 42px;
   }

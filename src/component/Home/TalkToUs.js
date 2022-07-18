@@ -7,7 +7,7 @@ export default function TalkToUs() {
         <div className="title has-font-size-large">Still got questions?</div>
         <a
           href="mailto:contact@subvisual.com?subject=Hi%20Subvisual!%20I%20want%20to%20talk%20to%20you"
-          className="button"
+          className="button has-font-size-medium"
         >
           Talk to us
         </a>

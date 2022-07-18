@@ -5,36 +5,31 @@
   padding-top: 45px;
   margin-top: 49px;
   position: relative;
-  overflow: hidden;
-  min-height: 100vh;
-}
-
-.fold .background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0.9;
-  pointer-events: none;
+  overflow: clip;
 }
 
 .join-us {
   padding-top: 210px;
+}
+
+.join-us .background {
+  pointer-events: none;
+  width: 1000px;
+  height: 540px;
+  overflow: hidden;
   position: relative;
+  left: -500px;
 }
 
 .join-us .left {
   grid-column: span 4;
+  position: sticky;
+  top: 377px;
 }
 
 .join-us .right {
   grid-column-start: 5;
   grid-column-end: 13;
-}
-
-.join-us .title {
-  max-width: 600px;
 }
 
 .join-us .content {
@@ -43,11 +38,15 @@
 }
 
 .join-us .item {
-  margin-bottom: 112px;
+  margin-bottom: 224px;
+  transition: opacity 0.8s ease-out;
+  visibility: visible;
+  will-change: opacity, visibility;
 }
 
-.join-us .item:last-child {
-  margin-bottom: 224px;
+.join-us .item.is-hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .join-us .item .title {
@@ -95,6 +94,14 @@
 
 .how-it-works .row:first-child {
   margin-bottom: 28px;
+}
+
+.how-it-works .row:last-child {
+  margin-top: 28px;
+}
+
+.how-it-works .row:last-child > div {
+  flex: 0.5;
 }
 
 .how-it-works .box {
@@ -157,7 +164,7 @@
 }
 
 .are-you-up .if-you-like .left {
-  grid-column: span 3;
+  grid-column: span 4;
   grid-row: 2 / 3;
 }
 .line {
@@ -178,6 +185,7 @@
 .are-you-up .if-you-like .item {
   display: flex;
   align-items: center;
+  margin-bottom: 42px;
 }
 .are-you-up .your-opportunity {
   margin-bottom: 224px;
@@ -188,13 +196,10 @@
 }
 
 .are-you-up .your-opportunity .item {
-  /* display: flex;
-  align-items: center; */
   border-radius: 28px;
   color: var(--color-white);
   grid-column: span 4;
   padding: 42px;
-  margin-bottom: 224px;
 }
 
 /* .are-you-up .your-opportunity .item .title {
@@ -218,13 +223,12 @@
 }
 
 .onboard {
-  margin-bottom: 112px;
   position: relative;
   z-index: 1;
 }
 
 .onboard .title {
-  margin-top: 335px;
+  margin-top: 250px;
   margin-bottom: 70px;
 }
 
@@ -286,6 +290,14 @@
   max-width: 100%;
 }
 
+.footer a {
+  color: var(--color-black);
+}
+
+.footer a:hover {
+  color: var(--color-grey-light);
+}
+
 .contact-us {
   margin-bottom: 20px;
 }
@@ -314,30 +326,14 @@
   max-width: 100%;
 }
 
-@media (max-width: 1200px) {
-  .are-you-up .columns {
-    display: block;
-  }
-
-  .are-you-up .your-opportunity .item {
-    margin-bottom: 16px;
-  }
-
-  .join-us .columns {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .join-us .title {
-    margin-bottom: 64px;
-  }
-
-  .join-us .item .text {
-    margin-top: 42px;
-  }
+.Position-background {
+  position: relative;
+  overflow: hidden;
+  border-radius: 60px;
+  margin-bottom: 112px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .fold {
     margin-top: 0;
   }
@@ -388,6 +384,21 @@
 
   .fold .background {
     display: none;
+  }
+
+  .are-you-up .challenge .columns {
+    display: block;
+    text-align: center;
+  }
+
+  .join-us .columns {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .join-us .left {
+    position: static;
+    margin-bottom: 64px;
   }
 }
 

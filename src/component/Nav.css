@@ -11,6 +11,17 @@
   align-items: center;
 }
 
+.nav .menu-link {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  color: var(--color-black);
+}
+
+.nav .menu-link:hover {
+  color: var(--color-grey-light);
+}
+
 .nav .toggle {
   display: none;
 }
@@ -26,7 +37,7 @@
 }
 
 .mobile-menu {
-  padding: 72px;
+  padding: 88px;
   height: 100%;
 }
 
@@ -43,13 +54,7 @@
   height: 100%;
 }
 
-@media (max-width: 1200px) {
-  .nav-content .menu {
-    column-gap: 20px;
-  }
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .nav .menu {
     display: none;
   }
@@ -118,7 +123,7 @@
   }
 
   .nav .menu-item a {
-    text-decoration: none;
+    display: block;
   }
 
   .nav .button {

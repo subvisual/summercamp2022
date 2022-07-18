@@ -4,11 +4,9 @@ import "./Home.css";
 import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import React, { Fragment } from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { ParallaxProvider } from "react-scroll-parallax";
 
 import Nav from "../component/Nav";
-import ThreeDee from "../component/ThreeDeeLazy";
 import Seo from "../component/Seo";
 import JoinUs from "../component/Home/JoinUs";
 import AreYouUp from "../component/Home/AreYouUp";
@@ -64,9 +62,6 @@ function Home(props) {
         </Helmet>
         <Seo />
         <div className="fold has-background-blue-light">
-          <div className="background">
-            <ThreeDee />
-          </div>
           <Nav />
           <JoinUs />
         </div>
@@ -76,7 +71,7 @@ function Home(props) {
         <HowItWorks />
         <SomeQuestions faqs={faqs} />
         <TalkToUs />
-        <div className="has-background-blue Position-background">
+        <div className="fold has-background-blue Position-background">
           <div className="backgroundImage"></div>
           {/* <StaticImage
             className="img"

@@ -33,15 +33,15 @@
 }
 
 .project-showcase .project:nth-child(1) .project-image {
-  background-color: aqua;
+  background-color: #e8f4ff;
 }
 
 .project-showcase .project:nth-child(2) .project-image {
-  background-color: aquamarine;
+  background-color: #c1ecd6;
 }
 
 .project-showcase .project:nth-child(3) .project-image {
-  background-color: bisque;
+  background-color: #cad9fa;
 }
 
 .project-showcase .project .project-title,
@@ -63,7 +63,7 @@
   margin-bottom: 56px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .project-showcase .project .project-image {
     padding: 56px 0;
   }
