@@ -65,7 +65,7 @@
 
 @media (max-width: 1024px) {
   .project-showcase .project .project-image {
-    padding: 56px 0;
+    max-height: none;
   }
 
   .project-showcase .columns {

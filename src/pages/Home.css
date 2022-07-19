@@ -38,15 +38,11 @@
 }
 
 .join-us .item {
-  margin-bottom: 448px;
-  transition: opacity 0.7s ease-out;
-  visibility: visible;
-  will-change: opacity, visibility;
+  margin-bottom: 560px;
 }
 
-.join-us .item.is-hidden {
-  opacity: 0;
-  visibility: hidden;
+.join-us .item:last-child {
+  margin-bottom: 448px;
 }
 
 .join-us .item .title {
@@ -135,7 +131,6 @@
 .are-you-up .challenge .header {
   grid-column: span 7;
   margin-bottom: 42px;
-  max-width: 600px;
 }
 
 .are-you-up .challenge .firstphoto {
@@ -388,6 +383,10 @@
 
   .are-you-up .challenge .columns {
     display: block;
+  }
+
+  .are-you-up .firstphoto {
+    margin-bottom: 40px;
     text-align: center;
   }
 
@@ -402,7 +401,7 @@
   }
 
   .join-us .item {
-    margin-bottom: 224px;
+    margin-bottom: 224px !important;
   }
 }
 

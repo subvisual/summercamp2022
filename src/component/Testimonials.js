@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 import "./Testimonials.css";
 
@@ -49,11 +50,19 @@ export default function Testimonials({ testimonials }) {
         <div className="content">
           {testimonials.map((testimonial, index) => {
             return (
-              <div
+              <motion.div
+                animate={currentSlide !== index ? "open" : "closed"}
+                variants={{
+                  open: { opacity: 1 },
+                  closed: {
+                    opacity: 0,
+                    visibility: "hidden",
+                    display: "none",
+                  },
+                }}
+                transition={{ duration: 0.5, easings: ["easeIn", "easeOut"] }}
                 key={index}
-                className={
-                  "testimonial" + (currentSlide !== index ? " is-hidden" : "")
-                }
+                className="testimonial"
               >
                 <div className="text">
                   <div
@@ -65,7 +74,7 @@ export default function Testimonials({ testimonials }) {
                   <p>{testimonial.author}</p>
                   <p>{testimonial.info}</p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
           <div className="buttons">
