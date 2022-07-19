@@ -3,7 +3,7 @@ import React from "react";
 export default function HowItWorks() {
   return (
     <div className="how-it-works" id="how-it-works">
-      <div className="container without-padding">
+      <div className="container">
         <div className="background has-background-blue-dark">
           <div className="columns">
             <div className="top">

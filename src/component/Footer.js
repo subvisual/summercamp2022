@@ -99,11 +99,8 @@ export default function Footer() {
             <div className="offices-content  has-font-size-small">
               Remote. Work anywhere in Europe.
               <br />
-              Or join our mothership,landed in Braga, Portugal.
+              Or join our mothership, landed in Braga, Portugal.
             </div>
-            {/* <div className="image">
-              <img src={ImageFooter} alt="" />
-            </div> */}
           </div>
         </div>
 
